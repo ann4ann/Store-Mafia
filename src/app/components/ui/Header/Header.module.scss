@@ -1,3 +1,97 @@
+* {
+   box-sizing: border-box;
+}
+
 .header {
-  background-color: rgb(128, 36, 0);
+   background-color: white;
+   //  position: fixed;
+   width: 100vw;
+   height: auto;
+   display: flex;
+   flex-direction: column;
+   letter-spacing: 1px;
+
+   .head {
+      height: 6rem;
+      display: flex;
+      width: 100vw;
+
+      .container {
+         margin: 0 auto;
+         width: 95%;
+         display: flex;
+         align-items: center;
+
+         .image {
+            width: 20rem;
+            height: 3.5rem;
+
+            background: url('./mafia.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            margin-right: 5rem;
+         }
+
+         .input {
+            display: flex;
+            align-items: center;
+            margin-left: 5rem;
+            margin-right: 5rem;
+            input {
+               border: 1px solid grey;
+               border-radius: 4px;
+               width: 34.7rem;
+               padding: 0.93rem;
+               padding-right: 10rem;
+               background: url('./search.svg') no-repeat;
+               background-size: 20px;
+               background-position: 97% 50%;
+            }
+         }
+
+         .number {
+            display: flex;
+            width: auto;
+            height: 100%;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 14px;
+
+            button {
+               background: none;
+               border: none;
+               cursor: pointer;
+            }
+
+            img {
+               width: 0.8rem;
+            }
+         }
+
+         .line {
+            border-left: 2px solid rgb(194, 194, 194);
+            height: 2.5rem;
+            margin: 0 2rem;
+         }
+
+         .registration {
+            width: auto;
+            display: flex;
+
+            button {
+               font-size: 14px;
+               font-weight: bold;
+               border: none;
+               background: none;
+               cursor: pointer;
+
+               img {
+                  width: 0.8rem;
+               }
+            }
+         }
+      }
+   }
 }
