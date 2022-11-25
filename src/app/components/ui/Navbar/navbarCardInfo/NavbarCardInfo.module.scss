@@ -1,0 +1,67 @@
+.cardInfo {
+    display: flex;
+    align-items: center;
+}
+
+.svgInner {
+    margin-right: 20px;
+    position: relative;
+
+    svg {
+        cursor: pointer;
+    }
+
+    &:hover {
+        ::before {
+            content: 'Корзина';
+            position: absolute;
+            background-color: #fdfdfd;
+            width: 67px;
+            height: 17px;
+            text-align: center;
+            font-weight: 400;
+            font-size: 11px;
+            line-height: 11px;
+            color: #12212D;
+            bottom: -37px;
+            left: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+}
+
+
+.busketValue {
+    position: absolute;
+    background: #9E9E9E;
+    border-radius: 50%;
+    width: 13px;
+    height: 13px;
+    font-size: 7px;
+    line-height: 10px;
+    text-align: center;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: -5px;
+    left: 15px;
+}
+
+.title {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    color: #FFFFFF;
+    opacity: 0.7;
+    margin-bottom: 1px;
+}
+
+.sumValue {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 19px;
+    color: #FFFFFF;
+}
