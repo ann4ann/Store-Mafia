@@ -49,7 +49,7 @@ export const CardDetailDesc = () => {
                 <button onClick={ (event:any) => {
                     increment()
                     incPrice() }}>+</button>
-                <input type='submit' value='Купить' className={style.btn} />
+                <input type='submit' value='Купить' />
                 <span>{data.status}</span>
             </div>
             <div className={style.secondDiv}>
