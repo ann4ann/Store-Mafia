@@ -1,0 +1,47 @@
+.wrapper {
+    margin: 20px;
+}
+
+.mainImg {
+    width: 550px;
+    height: 280px;
+}
+
+.firstImg {
+    width: 550px;
+    height: 280px;
+}
+
+.text {
+    position: absolute;
+    left: 30em;
+    top: 5em;
+    background-color: #75D67E;
+    width: 82px;
+    height: 25px;
+    text-align: center;
+}
+
+.secondImg {
+    display: flex;
+    width: 524px;
+    margin-top: 10px;
+}
+
+.secondaryImg {
+    height: 100px;
+    margin-right: 10px;
+    width: 160px;
+}
+
+.btn {
+    width: 100px;
+    height: 100px;
+    border: 1px solid #B7BCC0;
+    border-radius: 2px;
+}
+
+.arrow {
+    width: 25px;
+    height: 9px;
+}
