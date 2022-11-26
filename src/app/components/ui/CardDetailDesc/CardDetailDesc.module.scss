@@ -1,0 +1,49 @@
+.wrapper {
+    width: 750px;
+    height: 400px;
+
+    .firstDiv {
+        display: flex;
+        height: 110px;
+        border-bottom: 1px solid #B7BCC0;
+        text-align: center;
+        justify-content: space-around;
+
+        p {
+            text-align: center;
+            font-size: 24px;
+            margin: auto 0 auto 0;
+            font-weight: 600;
+        }
+
+        button {
+            width: 30px;
+            height: 30px;
+            margin: auto 0 auto 0;
+        }
+
+        button:hover {
+            cursor: pointer;
+        }
+
+        input {
+            width: 170px;
+            height: 45px;
+            margin: auto 0 auto 0;
+            background-color: #E75B65;
+            color: #fff;
+            border: 1px solid #fff;
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        input:hover {
+            cursor: pointer;
+        }
+
+        span {
+            margin: auto 0 auto 0;
+            color: #D57B1C;
+        }
+    }
+}
