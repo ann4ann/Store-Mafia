@@ -46,4 +46,20 @@
             color: #D57B1C;
         }
     }
+
+    .secondDiv {
+        margin: 30px;
+
+        div {
+            margin: 20px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        p {
+            margin: 20px;
+            font-size: 14px;
+            line-height: 24px;
+        }
+    }
 }
