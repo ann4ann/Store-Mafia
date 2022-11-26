@@ -7,7 +7,7 @@ interface IListItem {
     link: string
 }
 
-const NavbarNavigation = () => {
+const NavbarNavigation: React.FC = () => {
 
     const listItems: IListItem[] = [
         { title: 'Все товары', link: 'catalog' },

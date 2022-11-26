@@ -3,7 +3,7 @@ import styles from "./Navbar.module.scss";
 import NavbarCardInfo from "./navbarCardInfo/NavbarCardInfo";
 import NavbarNavigation from "./navigation/NavbarNavigation";
 
-const Navbar = () => {
+const Navbar: React.FC = () => {
   return (
     <div className={styles.navbar}>
       <div className="container">

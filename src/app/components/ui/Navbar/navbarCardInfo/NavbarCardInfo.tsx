@@ -1,6 +1,7 @@
+import React from 'react';
 import styles from './NavbarCardInfo.module.scss'
 
-const NavbarCardInfo = () => {
+const NavbarCardInfo: React.FC = () => {
 
     const busketValue: number = 10
     const sumValue: number = 14433
