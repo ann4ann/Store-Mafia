@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import style from './CardDetailDesc.module.scss'
+import star from './star.png'
 
 
 export const CardDetailDesc = () => {
@@ -52,7 +53,16 @@ export const CardDetailDesc = () => {
                 <span>{data.status}</span>
             </div>
             <div className={style.secondDiv}>
-
+                <div>
+                    <img src={star} alt='' />
+                    <img src={star} alt='' />
+                    <img src={star} alt='' />
+                    <img src={star} alt='' />
+                    <img src={star} alt='' />
+                </div>
+                <div>{data.article}</div>
+                <div>{data.category}</div>
+                <p>{data.description}</p>
             </div>
         </div>
     )
