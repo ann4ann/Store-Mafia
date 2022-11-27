@@ -22,6 +22,14 @@
             margin: auto 0 auto 0;
         }
 
+        .minus:active {
+            background-color: red;
+        }
+
+        .plus:active {
+            background-color: greenyellow;
+        }
+
         button:hover {
             cursor: pointer;
         }
@@ -35,6 +43,11 @@
             border: 1px solid #fff;
             font-weight: 600;
             font-size: 14px;
+        }
+
+        input:active {
+            border: rgb(117, 3, 3);
+            background-color: rgb(117, 3, 3);
         }
 
         input:hover {

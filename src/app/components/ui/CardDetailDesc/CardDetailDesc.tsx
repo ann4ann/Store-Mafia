@@ -1,9 +1,8 @@
-import React, {useState} from 'react'
+import React, {FC, useState} from 'react'
 import style from './CardDetailDesc.module.scss'
-import star from './star.png'
 
 
-export const CardDetailDesc = () => {
+export const CardDetailDesc: FC = () => {
     const data = {
         text: 'Цена',
         money: ' ₽',
@@ -44,22 +43,16 @@ export const CardDetailDesc = () => {
                 <p>{data.text}</p>
                 <p>{price} {data.money}</p>
                 <button onClick={ (event:any) => {decrement()
-                decPrice() } } >-</button>
+                decPrice() } } className={style.minus} >-</button>
                 <p>{count} шт.</p>
                 <button onClick={ (event:any) => {
                     increment()
-                    incPrice() }}>+</button>
+                    incPrice() }} className={style.plus}>+</button>
                 <input type='submit' value='Купить' />
                 <span>{data.status}</span>
             </div>
             <div className={style.secondDiv}>
-                <div>
-                    <img src={star} alt='' />
-                    <img src={star} alt='' />
-                    <img src={star} alt='' />
-                    <img src={star} alt='' />
-                    <img src={star} alt='' />
-                </div>
+                
                 <div>{data.article}</div>
                 <div>{data.category}</div>
                 <p>{data.description}</p>
