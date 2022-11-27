@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { FC } from 'react';
 import style from './CardDetailGalery.module.scss'
 import goldenMafia from './goldenMafia.png'
 import arrow from './arrow.png'
 
 
-export const CardDetailGalery = () => {
+export const CardDetailGalery: FC = () => {
 
     return(
         <div className={style.wrapper}>
