@@ -1,0 +1,21 @@
+.togleContainer {
+    background: #FFFFFF;
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.btn{
+    border: none;
+    background: none;
+    width: 128px;
+    padding: 20px;
+    position: relative;
+    cursor: pointer;
+}
+
+.active{
+    border-bottom: 4px solid #D93C47;
+    padding-bottom: 16px;
+}

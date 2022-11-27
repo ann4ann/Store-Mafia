@@ -1,0 +1,27 @@
+.reviewsItem {
+    margin-bottom: 30px;
+    max-width: 557px;
+    width: 100%;
+    border-bottom: 1px solid #B7BCC0;;
+}
+
+.titleWrapper{
+    display: flex;
+    align-items: center;
+}
+
+.title {
+    font-size: 14px;
+    line-height: 19px;
+    letter-spacing: -0.1px;
+    color: #12212D;
+    margin-right: 10px;
+}
+
+.text {
+    margin: 15px 0px 30px;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: -0.1px;
+    color: #12212D;
+}
