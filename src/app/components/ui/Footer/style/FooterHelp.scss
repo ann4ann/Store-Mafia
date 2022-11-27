@@ -1,0 +1,8 @@
+@import "./FooterBlock.scss";
+
+.Footer__block_help{
+    @extend %Footer-block !optional;
+    width: 192px;
+    height: 120px;
+    margin-bottom:52px;
+}
