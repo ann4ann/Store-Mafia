@@ -1,5 +1,5 @@
 import React from "react";
-import "./card.css";
+import "./card.scss";
 
 const data = {
   aviability: "в наличии",
@@ -9,7 +9,7 @@ const data = {
 const CardItem = () => {
   const { aviability, price, productName } = data;
   return (
-    <div className="card">
+    <div className="styles.card">
       <div className="card-item">
         <span>{aviability}</span>
         <img
