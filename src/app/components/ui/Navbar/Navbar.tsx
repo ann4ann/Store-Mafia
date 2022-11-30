@@ -1,4 +1,5 @@
 import React from "react";
+import Wrapper from "../Wrapper/Wrapper";
 import styles from "./Navbar.module.scss";
 import NavbarCardInfo from "./navbarCardInfo/NavbarCardInfo";
 import NavbarNavigation from "./navigation/NavbarNavigation";
@@ -6,13 +7,14 @@ import NavbarNavigation from "./navigation/NavbarNavigation";
 const Navbar: React.FC = () => {
   return (
     <div className={styles.navbar}>
-      <div className="container">
+      <Wrapper>
         <div className={styles.navbarWrapper}>
           <NavbarNavigation />
           <NavbarCardInfo />
         </div>
-      </div>
+      </Wrapper>
     </div>
+
   );
 };
 
