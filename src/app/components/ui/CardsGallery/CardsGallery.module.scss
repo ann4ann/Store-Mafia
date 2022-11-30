@@ -1,0 +1,29 @@
+.cardsGallery {
+  margin-top: 80px;
+  background-color: #e5e5e5;
+
+  &__title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 27px;
+    text-align: center;
+  }
+  &__items {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    border-bottom: 1px solid #b7bcc0;
+  }
+  &__pagination {
+    display: flex;
+    justify-content: center;
+
+    & > button {
+      width: 60px;
+      height: 60px;
+      // padding: 25px 22px;
+      color: #d93c47;
+      border: 1px solid #b7bcc0;
+    }
+  }
+}
