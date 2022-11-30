@@ -1,0 +1,29 @@
+.wrapper {
+    background: #FFFFFF;
+    border-radius: 2px;
+    padding: 40px 102px 30px 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.more {
+    border: 1px solid #B7BCC0;
+    border-radius: 2px;
+    background-color: #fff;
+    max-width: 560px;
+    width: 100%;
+    padding: 13px;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: -0.1px;
+    color: #12212D;
+    cursor: pointer;
+    
+}
