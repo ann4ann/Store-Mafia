@@ -1,0 +1,13 @@
+@import "./FooterBlock.scss";
+
+
+.Footer__block_catalog{
+    @extend %Footer-block !optional;
+    width: 124px;
+    height: 186px;
+    margin-top:15px;
+}
+
+.Footer__header{
+    margin-bottom: 10px;
+}
