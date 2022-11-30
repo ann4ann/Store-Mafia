@@ -3,9 +3,7 @@ import CardDetailDetails from "../../ui/CardDetailDetails/CardDetailDetails";
 import styles from "./HomePage.module.scss";
 
 const HomePage = () => {
-  return <div className={styles.homePage}>
-    <CardDetailDetails/>
-  </div>;
+  return <div className={styles.homePage}>HomePage</div>;
 };
 
 export default HomePage;

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Wrapper from '../Wrapper/Wrapper';
 import styles from './CardDetailDetails.module.scss'
 import CardDetailDetailsDescription from './cardDetailDetailsDescription/CardDetailDetailsDescription';
 import CardDetailDetailsReviews from './cardDetailDetailsReviews/CardDetailDetailsReviews';
@@ -16,8 +17,8 @@ const CardDetailDetails: React.FC = () => {
     }
 
     return (
-        <div className={styles.container}>
-            <div className={styles.wrapper}>
+        <Wrapper>
+            <div className={styles.container}>
 
                 <CardDetailDetailsTop
                     onClickHandler={onClickHandler}
@@ -31,7 +32,7 @@ const CardDetailDetails: React.FC = () => {
                 }
 
             </div>
-        </div>
+        </Wrapper>
 
     );
 };
