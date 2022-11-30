@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import { product } from "../../../../types/DataTypes";
-import Card from "../Card/Card";
+// import Card from "../Card/Card";
 import styles from "./CardsGallery.module.scss";
 
 // cardsArr and title for test:
@@ -46,7 +46,9 @@ const CardsGallery: FC =
           <h4 className={styles.cardsGallery__title}>{title}</h4>
           <div className={styles.cardsGallery__items}>
             {cardsArr.map((item: product) => (
-              <Card {...item} />
+              // <Card {...item} />
+              // Удалить, когда добавится Card
+              <div className={styles.card}>Card</div>
             ))}
           </div>
           <div className={styles.cardsGallery__pagination}>
