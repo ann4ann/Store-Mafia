@@ -1,3 +1,41 @@
 .homePage {
   background-color: pink;
 }
+
+.main {
+  display: flex;
+  margin-top: 30px;
+  // Убрать свойства, когда будут готовы компоненты
+  &__menu {
+    width: 303px;
+    height: 504px;
+    background-color: #fff;
+  }
+  &__offer {
+    margin-left: 30px;
+    width: 966px;
+    height: 504px;
+    background-color: rgb(58, 58, 58);
+  }
+}
+
+.sale {
+  display: flex;
+  gap: 30px;
+  padding-top: 70px;
+}
+
+.about {
+  &__title {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 40px;
+  }
+  &__text {
+    & > p {
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 22px;
+    }
+  }
+}
