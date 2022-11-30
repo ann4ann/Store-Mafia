@@ -6,7 +6,7 @@ interface WrapperProps {
   className?: string;
 }
 const Wrapper: React.FC<WrapperProps> = ({ children, className }) => {
-  return <div className={s.wrapper + " " + className}>{children}</div>;
+  return <div className={s.wrapper + " " + (className || "")}>{children}</div>;
 };
 
 export default Wrapper;
