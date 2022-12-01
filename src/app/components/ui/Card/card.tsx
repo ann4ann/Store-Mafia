@@ -1,6 +1,5 @@
 import React from "react";
 import "./card.scss";
-import styles from "./Card.module.scss";
 
 const data = {
   aviability: "в наличии",
@@ -10,18 +9,18 @@ const data = {
 const CardItem = () => {
   const { aviability, price, productName } = data;
   return (
-    <div className={styles.card}>
-      <div className="styles.card-item">
+    <div className="card">
+      <div className="card-item">
         <span>{aviability}</span>
         <img
           src="http://course.fudzi.kz/numerok.jpg"
           alt={productName}
-          className="styles.product-img"
+          className="product-img"
         />
       </div>
       <span>{productName}</span>
-      <div className="styles.card-footer">
-        <span className="styles.price">Цена: {price}</span>
+      <div className="card-footer">
+        <span className="price">Цена: {price}</span>
         <a href="https://google.com" className="btn">
           Купить
         </a>
