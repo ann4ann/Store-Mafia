@@ -1,0 +1,30 @@
+.navigation {
+    max-width: 700px;
+    width: 100%;
+}
+
+.navigationItems {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navigationItem {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 19px;
+    color: #FFFFFF;
+    position: relative;
+    transition: all 0.5s;
+
+    &:hover {
+        ::before {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            width: 62px;
+            height: 2px;
+            background-color: #fff;
+        }
+    }
+}
