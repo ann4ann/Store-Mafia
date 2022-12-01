@@ -6,32 +6,32 @@ import styles from "./CardsGallery.module.scss";
 // cardsArr and title for test:
 const cardsArr: product[] = [
   {
-    img: "string",
+    img: ["string", "string"],
     name: "string",
     desc: "string",
     price: 55,
-    rate: 3,
+    rate: { rate: 4.2, count: 7 },
   },
   {
-    img: "string",
+    img: ["string", "string"],
     name: "string",
     desc: "string",
     price: 55,
-    rate: 3,
+    rate: { rate: 4.2, count: 7 },
   },
   {
-    img: "string",
+    img: ["string", "string"],
     name: "string",
     desc: "string",
     price: 55,
-    rate: 3,
+    rate: { rate: 4.2, count: 7 },
   },
   {
-    img: "string",
+    img: ["string", "string"],
     name: "string",
     desc: "string",
     price: 55,
-    rate: 3,
+    rate: { rate: 4.2, count: 7 },
   },
 ];
 const title: string = "Хиты продаж";
