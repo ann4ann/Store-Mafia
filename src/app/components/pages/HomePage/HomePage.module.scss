@@ -4,18 +4,13 @@
 
 .main {
   display: flex;
+  justify-content: space-between;
   margin-top: 30px;
-  // Убрать свойства, когда будут готовы компоненты
+
   &__menu {
     width: 303px;
     height: 504px;
     background-color: #fff;
-  }
-  &__offer {
-    margin-left: 30px;
-    width: 966px;
-    height: 504px;
-    background-color: rgb(58, 58, 58);
   }
 }
 

@@ -1,6 +1,7 @@
 import React from "react";
 import CardsGallery from "../../ui/CardsGallery/CardsGallery";
 import Footer from "../../ui/Footer/app/Footer";
+import OfferProduct from "../../ui/OfferProduct/OfferProduct";
 import SaleCard from "../../ui/SaleCard/SaleCard";
 import Wrapper from "../../ui/Wrapper/Wrapper";
 import styles from "./HomePage.module.scss";
@@ -14,8 +15,8 @@ const HomePage = () => {
           {/* <ProductsMenu/> */}
           <div className={styles.main__menu}></div>
           {/* Раскомментировать, когда будет компонент */}
-          {/* <OfferProduct/> */}
-          <div className={styles.main__offer}></div>
+          <OfferProduct/>
+          {/* <div className={styles.main__offer}></div> */}
         </section>
         <CardsGallery />
         <CardsGallery />
