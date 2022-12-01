@@ -1,0 +1,53 @@
+@import url("./fonts/stylesheet.css");
+* {
+  box-sizing: border-box;
+}
+.card {
+  display: flex;
+  width: 303px;
+  height: 290px;
+  border-radius: 2px;
+  background: #ffffff;
+  font-family: "Avenir Next Cyr";
+  align-items: center;
+  font-size: 14px;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.card-item {
+  width: 272px;
+  height: 181px;
+  margin-bottom: 10px;
+}
+.product-img {
+  width: 272px;
+  height: 155px;
+  margin-top: 10px;
+}
+.card-footer {
+  display: flex;
+  background: transparent;
+  justify-content: space-between;
+  align-items: center;
+  width: 272px;
+}
+.price {
+  font-weight: bold;
+}
+.btn {
+  text-decoration: none;
+  width: 88px;
+  height: 34px;
+  border-radius: 3px;
+  border: 1px solid #dc434e;
+  color: #dc434e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.8s;
+}
+.btn:hover {
+  background-color: #dc434e;
+  color: #ffffff;
+}
