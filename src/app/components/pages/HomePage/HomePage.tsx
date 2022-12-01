@@ -1,4 +1,5 @@
 import React from "react";
+<<<<<<< HEAD
 import CardsGallery from "../../ui/CardsGallery/CardsGallery";
 import Footer from "../../ui/Footer/app/Footer";
 import SaleCard from "../../ui/SaleCard/SaleCard";
@@ -70,6 +71,15 @@ const HomePage = () => {
       </Wrapper>
     </div>
   );
+=======
+import CardDetailDetails from "../../ui/CardDetailDetails/CardDetailDetails";
+import styles from "./HomePage.module.scss";
+
+const HomePage = () => {
+  return <div className={styles.homePage}>
+    <CardDetailDetails/>
+  </div>;
+>>>>>>> e0d269c (add component CardDetailDetails)
 };
 
 export default HomePage;
