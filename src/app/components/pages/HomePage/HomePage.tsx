@@ -3,6 +3,7 @@ import CardsGallery from "../../ui/CardsGallery/CardsGallery";
 import Footer from "../../ui/Footer/app/Footer";
 import OfferProduct from "../../ui/OfferProduct/OfferProduct";
 import SaleCard from "../../ui/SaleCard/SaleCard";
+import Sidebar from "../../ui/Sidebar/Sibebar";
 import Wrapper from "../../ui/Wrapper/Wrapper";
 import styles from "./HomePage.module.scss";
 
@@ -11,20 +12,17 @@ const HomePage = () => {
     <div className={styles.homePage}>
       <Wrapper>
         <section className={styles.main}>
-          {/* Раскомментировать, когда будет компонент */}
-          {/* <ProductsMenu/> */}
+          <Sidebar />
           <div className={styles.main__menu}></div>
-          {/* Раскомментировать, когда будет компонент */}
-          <OfferProduct/>
-          {/* <div className={styles.main__offer}></div> */}
+          <OfferProduct />
         </section>
-        <CardsGallery />
-        <CardsGallery />
+        <CardsGallery itemsCount={4} category="masks" />
+        <CardsGallery itemsCount={4} category="kit" />
         <section className={styles.sale}>
           <SaleCard title="Маска для мафии “Чикаго”" price={590} />
           <SaleCard title="Маска для мафии “Чикаго”" price={590} />
         </section>
-        <CardsGallery />
+        <CardsGallery itemsCount={4} category="kit" />
         <section className={styles.about}>
           <h4 className={styles.about__title}>Тут должен быть заголовок</h4>
           <div className={styles.about__text}>
