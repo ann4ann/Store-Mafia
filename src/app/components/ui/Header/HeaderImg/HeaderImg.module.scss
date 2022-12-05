@@ -1,0 +1,28 @@
+.main_img {
+   // margin-right: 5rem;
+   // width: 14rem;
+   height: 100%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   font-size: 14px;
+   flex-grow: 0;
+
+   .img_container {
+      width: 60%;
+      min-width: 11rem;
+      color: #705658;
+      .image {
+         margin: 0 0.4rem;
+         height: 3.5rem;
+         // width: 20rem;
+         background: url('./mafia.png');
+         background-size: contain;
+         background-repeat: no-repeat;
+      }
+      p {
+         margin: 0;
+      }
+   }
+}

@@ -1,0 +1,17 @@
+.registration {
+   display: flex;
+   width: 12rem;
+
+   button {
+      font-size: 14px;
+      font-weight: bold;
+      border: none;
+      background: none;
+      cursor: pointer;
+
+      background: url('./arrowDown.png') no-repeat;
+      background-size: 5px;
+      background-position: right;
+      padding-right: 10px;
+   }
+}
