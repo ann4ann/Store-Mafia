@@ -15,16 +15,17 @@
     line-height: 19px;
     color: #FFFFFF;
     position: relative;
-    transition: all 0.5s;
+    border-bottom: 1px solid inherit;
+    position: relative;
 
     &:hover {
-        ::before {
+        ::before{
             content: '';
             position: absolute;
-            bottom: -10px;
-            width: 62px;
             height: 2px;
+            width: 100%;
             background-color: #fff;
+            bottom: -10px;
         }
     }
 }
