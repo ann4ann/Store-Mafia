@@ -4,181 +4,31 @@
 
 .header {
    background-color: white;
-   //  position: fixed;
-   width: 100vw;
    height: auto;
-   display: flex;
-   flex-direction: column;
-   letter-spacing: 1px;
    .container {
       height: 6rem;
-      margin: 0 auto;
-      width: 95%;
       display: flex;
       align-items: center;
-      //  background: grey;
       justify-content: space-between;
 
-      @media (max-width: 1459px) {
-         justify-content: space-around;
-      }
-
-      .main_img {
-         // margin-right: 5rem;
-         width: 14rem;
-         height: 100%;
+      .inner {
+         flex-grow: 2;
          display: flex;
-         flex-direction: column;
-         align-items: center;
-         justify-content: center;
-         font-size: 14px;
-         margin-right: 5rem;
+         justify-content: flex-end;
 
-         .img_container {
-            width: 60%;
-            min-width: 11rem;
-            color: #705658;
-            .image {
-               margin: 0 0.4rem;
-               height: 3.5rem;
-               // width: 20rem;
-               background: url('./mafia.png');
-               background-size: contain;
-               background-repeat: no-repeat;
-            }
-            p {
-               margin: 0;
-            }
-         }
-
-         @media (max-width: 1459px) {
-            margin: 0;
-         }
-      }
-
-      .input {
-         display: flex;
-         position: relative;
-         align-items: center;
-         margin-left: 10rem;
-         // margin-right: 5rem;
-         width: 40%;
-         input {
-            border: 1px solid grey;
-            border-radius: 4px;
-            width: 100%;
-            padding: 0.93rem;
-            background: url('./search.svg') no-repeat;
-            background-size: 20px;
-            background-position: 97% 50%;
-
-            &:hover,
-            &:focus-visible {
-               outline: 1px solid black;
-
-               border: 1px solid black;
-               box-shadow: 5px 4px 4px 4px lightgrey;
-            }
-         }
-
-         .input_search {
-            position: absolute;
-            top: 20%;
-            margin-top: 0.25rem;
-            width: 100%;
-            max-height: 9rem;
-            overflow-y: auto;
-            padding: 0.5rem;
-            background: white;
-            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1),
-               0 4px 6px -4px rgb(0 0 0 / 0.1);
-            border-bottom-left-radius: 0.25rem;
-            border-bottom-right-radius: 0.25rem;
-         }
-
-         @media (max-width: 1459px) {
-            margin-left: 0;
-         }
-      }
-
-      .drop_down {
-         display: flex;
-         justify-content: space-between;
-         // align-items: center;
-
-         width: 20%;
-
-         @media (max-width: 1526px) {
-            width: 23%;
-         }
-
-         @media (max-width: 1459px) {
-            width: 35%;
-         }
-
-         .number {
+         .drop_down {
             display: flex;
+            justify-content: space-between;
+            // align-items: center;
 
-            height: 100%;
-            justify-content: center;
-            align-items: center;
-            cursor: pointer;
-            font-weight: bold;
-            font-size: 14px;
+            width: 30;
+            margin-right: 2rem;
 
-            background: url('./arrowDown.png') no-repeat;
-            background-size: 5px;
-            background-position: right;
-            // padding-right: 5px;
-            max-width: 8rem;
-
-            p {
-               min-width: 9rem;
-               max-width: 9rem;
-            }
-
-            button {
-               background: none;
-               border: none;
-               cursor: pointer;
-            }
-
-            @media (max-width: 1459px) {
-               // height: 2rem;
-               display: flex;
-               justify-content: center;
-               align-items: center;
-               padding-right: 0px;
-               letter-spacing: 0.8px;
-               margin-right: 0.5rem;
-               margin-left: 1rem;
-            }
-         }
-
-         .line {
-            border-left: 2px solid rgb(194, 194, 194);
-            height: 2.5rem;
-         }
-
-         .registration {
-            width: auto;
-            display: flex;
-
-            button {
-               font-size: 14px;
-               font-weight: bold;
-               border: none;
-               background: none;
-               cursor: pointer;
-
-               background: url('./arrowDown.png') no-repeat;
-               background-size: 5px;
-               background-position: right;
-               padding-right: 10px;
-            }
-
-            @media (max-width: 1459px) {
-               margin-left: 0.5rem;
+            .line {
+               width: 5%;
+               border-left: 2px solid rgb(194, 194, 194);
+               height: 3rem;
+               margin-right: 1rem;
             }
          }
       }
