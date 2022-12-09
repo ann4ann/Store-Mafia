@@ -1,6 +1,4 @@
 .cardsGallery {
-  background-color: #e5e5e5;
-
   &__title {
     margin: 0;
     font-weight: 700;
@@ -10,6 +8,7 @@
   }
   &__items {
     margin-top: 30px;
+    padding-bottom: 30px;
     display: flex;
     justify-content: center;
     gap: 30px;
@@ -20,6 +19,7 @@
     justify-content: center;
 
     & > button {
+      background-color: rgba($color: #000000, $alpha: 0);
       width: 60px;
       height: 60px;
       // padding: 25px 22px;
@@ -28,10 +28,3 @@
     }
   }
 }
-
-// Удалить, когда добавится Card
-// .card {
-//   width: 303px;
-//   height: 290px;
-//   background-color: #fff;
-// }
