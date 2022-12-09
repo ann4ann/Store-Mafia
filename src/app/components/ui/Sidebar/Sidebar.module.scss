@@ -1,76 +1,69 @@
 .sidebar {
+  position: relative;
+  width: 303px;
+  height: 504px;
+
+  background: #ffffff;
+  border-radius: 2px;
+
+  h1 {
     position: absolute;
-    width: 303px;
-    height: 504px;
-    left: 40px;
-    top: 197px;
+    width: 157px;
+    height: 27px;
+    left: 30px;
+    top: 10px;
+    font-family: "Courier New", Courier, monospace;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 27px;
+    letter-spacing: -0.78px;
 
-    background: #FFFFFF;
-    border-radius: 2px;
-
-    h1 {
-        position: absolute;
-        width: 157px;
-        height: 27px;
-        left: 30px;
-        top: 10px;
-        font-family: 'Courier New', Courier, monospace;
-        font-style: normal;
-        font-weight: 700;
-        font-size: 18px;
-        line-height: 27px;
-        letter-spacing: -0.78px;
-    
-        color: #705658;
-    }
+    color: #705658;
+  }
 }
 
 .navlink {
-    position: absolute;
-    width: 124px;
-    height: 2000px;
-    left: 10px;
-    top: 40px;
-    font-family: 'Avenir Next';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 42px;
-    letter-spacing: -0.1px;
+  position: absolute;
+  width: 124px;
+  height: 2000px;
+  left: 10px;
+  top: 40px;
+  font-family: "Avenir Next";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 42px;
+  letter-spacing: -0.1px;
+  text-decoration: none;
+
+  ul {
+    margin: 0;
+    padding: 20px;
+  }
+
+  a {
     text-decoration: none;
-     
+  }
 
-    ul {
-        margin: 0;
-        padding: 20px;
-    }
-
-    a {
-        text-decoration: none;
-    }
-
-    li {
-        list-style-type: none;
-        color: #12212D;
-        margin: 1px;
-    }
+  li {
+    list-style-type: none;
+    color: #12212d;
+    margin: 1px;
+  }
 }
 
-
 .link_1 {
-    box-shadow: inset 0 0 red;
-    transition: box-shadow .1s, color .1s;
-    padding: 4px;
-    margin: -3px;
-    
-
+  box-shadow: inset 0 0 red;
+  transition: box-shadow 0.1s, color 0.1s;
+  padding: 4px;
+  margin: -3px;
 }
 
 .link_1:hover {
-    box-shadow: inset 3px 0 red;
+  box-shadow: inset 3px 0 red;
 }
 
 .link_1:active {
-    box-shadow: inset 100px 0 purple;
-
+  box-shadow: inset 100px 0 purple;
 }
