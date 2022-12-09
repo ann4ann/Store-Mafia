@@ -2,7 +2,7 @@ import React, { FC } from "react";
 import styles from "./SectionWrapper.module.scss";
 
 interface sectionWrapperProps {
-  mix: string;
+  mix?: string;
   children: React.ReactNode;
 }
 
