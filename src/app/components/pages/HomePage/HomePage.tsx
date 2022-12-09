@@ -1,4 +1,3 @@
-import React from "react";
 import SectionWrapper from "../../common/SectionWrapper/SectionWrapper";
 import CardsGallery from "../../ui/CardsGallery/CardsGallery";
 import Footer from "../../ui/Footer/app/Footer";
@@ -9,6 +8,7 @@ import Wrapper from "../../ui/Wrapper/Wrapper";
 import styles from "./HomePage.module.scss";
 
 const HomePage = () => {
+
   return (
     <div className={styles.homePage}>
       <Wrapper>
@@ -76,6 +76,7 @@ const HomePage = () => {
             </p>
           </div>
         </SectionWrapper>
+
         {/* <Footer /> */}
       </Wrapper>
     </div>

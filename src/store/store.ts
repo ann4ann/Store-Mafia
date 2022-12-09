@@ -1,8 +1,10 @@
 import { productAPI } from "./../services/ProductService";
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
+import { userAPI } from "../services/UserService";
 
 const rootReducer = combineReducers({
   [productAPI.reducerPath]: productAPI.reducer,
+  [userAPI.reducerPath]: userAPI.reducer
 });
 
 export const setupStore = () => {
@@ -11,6 +13,7 @@ export const setupStore = () => {
     middleware: (getDefaultMiddleware) =>
       getDefaultMiddleware()
         // .concat(postAPI.middleware)
+        .concat(userAPI.middleware)
         .concat(productAPI.middleware),
   });
 };

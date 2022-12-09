@@ -13,6 +13,7 @@
     "@types/react-dom": "^18.0.9",
     "@types/react-router-dom": "^5.3.3",
     "axios": "^1.2.0",
+    "concurrently": "^7.6.0",
     "node-sass": "^8.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -25,6 +26,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "dev": "concurrently \"npm start\" \"npm run server\" ",
     "build": "react-scripts build",
     "server": "json-server --watch db.json  --port 5000",
     "test": "react-scripts test",
