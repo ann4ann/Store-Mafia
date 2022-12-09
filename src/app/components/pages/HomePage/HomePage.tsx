@@ -1,4 +1,5 @@
 import React from "react";
+import SectionWrapper from "../../common/SectionWrapper/SectionWrapper";
 import CardsGallery from "../../ui/CardsGallery/CardsGallery";
 import Footer from "../../ui/Footer/app/Footer";
 import OfferProduct from "../../ui/OfferProduct/OfferProduct";
@@ -11,19 +12,29 @@ const HomePage = () => {
   return (
     <div className={styles.homePage}>
       <Wrapper>
-        <section className={styles.main}>
+        <SectionWrapper mix="horizontal-small">
           <Sidebar />
-          <div className={styles.main__menu}></div>
           <OfferProduct />
-        </section>
-        <CardsGallery itemsCount={4} category="masks" />
-        <CardsGallery itemsCount={4} category="kit" />
-        <section className={styles.sale}>
+        </SectionWrapper>
+
+        <SectionWrapper mix="vertical-large">
+          <CardsGallery itemsCount={4} category="masks" />
+        </SectionWrapper>
+
+        <SectionWrapper mix="vertical-large">
+          <CardsGallery itemsCount={4} category="kit" />
+        </SectionWrapper>
+
+        <SectionWrapper mix="horizontal-large">
           <SaleCard title="Маска для мафии “Чикаго”" price={590} />
           <SaleCard title="Маска для мафии “Чикаго”" price={590} />
-        </section>
-        <CardsGallery itemsCount={4} category="kit" />
-        <section className={styles.about}>
+        </SectionWrapper>
+
+        <SectionWrapper mix="vertical-large">
+          <CardsGallery itemsCount={4} category="kit" />
+        </SectionWrapper>
+
+        <SectionWrapper mix="vertical-medium">
           <h4 className={styles.about__title}>Тут должен быть заголовок</h4>
           <div className={styles.about__text}>
             <p>
@@ -64,7 +75,7 @@ const HomePage = () => {
               производим по России и странам СНГ!
             </p>
           </div>
-        </section>
+        </SectionWrapper>
         {/* <Footer /> */}
       </Wrapper>
     </div>

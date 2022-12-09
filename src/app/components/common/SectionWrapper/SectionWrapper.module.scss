@@ -1,0 +1,29 @@
+.sectionWrapper {
+  width: 100%;
+}
+
+.horizontal-large {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 80px;
+}
+.horizontal-medium {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 60px;
+}
+.horizontal-small {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 30px;
+}
+
+.vertical-large {
+  padding-top: 80px;
+}
+.vertical-medium {
+  padding-top: 60px;
+}
+.vertical-small {
+  padding-top: 30px;
+}
