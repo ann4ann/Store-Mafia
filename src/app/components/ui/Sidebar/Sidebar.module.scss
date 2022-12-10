@@ -25,9 +25,8 @@
 
 .navlink {
   position: absolute;
-  width: 124px;
+  width: 100%;
   height: 2000px;
-  left: 10px;
   top: 40px;
   font-family: "Avenir Next";
   font-style: normal;
@@ -39,7 +38,7 @@
 
   ul {
     margin: 0;
-    padding: 20px;
+    margin-top: 9px;
   }
 
   a {
@@ -50,20 +49,35 @@
     list-style-type: none;
     color: #12212d;
     margin: 1px;
+    transition: all 0.5s;
+    padding: 0 30px;
+    cursor: pointer;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 42px;
+    letter-spacing: -0.1px;
+
+    &:hover {
+      background-color: rgba(#D12C37, 0.1);
+      border-radius: 0px 2px 2px 0px;
+      box-shadow: inset 3px 0 red;
+    }
   }
 }
 
-.link_1 {
+.item {
   box-shadow: inset 0 0 red;
   transition: box-shadow 0.1s, color 0.1s;
   padding: 4px;
   margin: -3px;
 }
 
-.link_1:hover {
+.item:hover {
   box-shadow: inset 3px 0 red;
 }
 
-.link_1:active {
-  box-shadow: inset 100px 0 purple;
+.active {
+  background-color: rgba(#D12C37, 0.1);
+  border-radius: 0px 2px 2px 0px;
+  box-shadow: inset 3px 0 red;
 }
