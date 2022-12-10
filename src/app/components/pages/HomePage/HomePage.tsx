@@ -1,8 +1,6 @@
-import React from "react";
 import SectionWrapper from "../../common/SectionWrapper/SectionWrapper";
 import Title from "../../common/typografy/Title";
 import CardsGallery from "../../ui/CardsGallery/CardsGallery";
-import Footer from "../../ui/Footer/app/Footer";
 import OfferProduct from "../../ui/OfferProduct/OfferProduct";
 import SaleCard from "../../ui/SaleCard/SaleCard";
 import Sidebar from "../../ui/Sidebar/Sibebar";
@@ -74,7 +72,6 @@ const HomePage = () => {
             производим по России и странам СНГ!
           </p>
         </SectionWrapper>
-        {/* <Footer /> */}
       </Wrapper>
     </div>
   );
