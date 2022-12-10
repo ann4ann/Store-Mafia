@@ -16,7 +16,7 @@ const Footer: React.FC = () => {
                     <CotalogFooter/>
                     <Support/>
                     <ContactFooter/>
-                    <DiscountFooter /> 
+                    <DiscountFooter />
                 </div>
             </Wrapper>
         </footer>
