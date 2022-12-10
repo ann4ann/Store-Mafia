@@ -1,0 +1,11 @@
+.list {
+    margin-top: 10px;
+}
+
+.item {
+    transition: all 0.3s;
+
+    &:hover {
+        scale: 1.05;
+    }
+}
