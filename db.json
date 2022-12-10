@@ -106,32 +106,32 @@
   "users": [
     {
       "id": 1,
-      "name": "Илья",
-      "surname": "Слипец",
-      "patronymic": "КакЕгоТамович",
-      "phone": 79780001122,
+      "username": "Ivan",
+      "password": "1238",
+      "phone": 7999999999,
       "email": "ilya123558ilya@gmail.com"
     },
     {
       "id": 2,
-      "name": "Неилья",
-      "surname": "Неслипец",
-      "patronymic": "КакЕгоТамович",
-      "phone": 79780001122,
-      "email": "ilya123558ilya@gmail.com"
+      "username": "Ivan",
+      "password": "678",
+      "phone": 7999999999,
+      "email": "ilya123558ilya@gmail.com",
+      "name": {
+        "firstname": "ilya",
+        "lastname": "test"
+      }
     },
     {
       "id": 3,
-      "name": "Хтоя",
-      "surname": "Слипец",
-      "patronymic": "КакЕгоТамович",
-      "phone": 79780001122,
+      "username": "Ivan",
+      "password": "sdfsdfsdf",
+      "phone": 7999999999,
       "email": "ilya123558ilya@gmail.com"
     },
     {
-      "name": "Ivan",
-      "surname": "Ivanov",
-      "patronymic": "Ivanovich",
+      "username": "Ivan",
+      "password": "12345678",
       "phone": 7999999999,
       "email": "ilya123558ilya@gmail.com",
       "id": 4

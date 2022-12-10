@@ -24,7 +24,14 @@ export const userAPI = createApi({
                 body: user
             })
         }),
+        updateUser: build.mutation<IUser, IUser>({
+            query: (body) => ({
+                url: `users/${body.id}`,
+                method: 'PUT',
+                body
+            })
+        }),
     }),
 });
 
-export const { useFetchUsersQuery, useLazyFetchUserQuery, useCreateUserMutation } = userAPI
+export const { useFetchUsersQuery, useLazyFetchUserQuery, useCreateUserMutation, useUpdateUserMutation } = userAPI
