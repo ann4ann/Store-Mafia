@@ -1,5 +1,6 @@
 import React, { FC } from "react";
 import { productAPI } from "../../../../services/ProductService";
+import Subtitle from "../../common/typografy/Subtitle";
 import Card from "../Card";
 import styles from "./CardsGallery.module.scss";
 
@@ -17,9 +18,7 @@ const CardsGallery: FC<cardsGalleryProps> = ({ itemsCount, category }) => {
 
   return (
     <section className={styles.cardsGallery}>
-      <h4 className={styles.cardsGallery__title}>
-        {products?.at(0)?.category.name}
-      </h4>
+      <Subtitle mix="center">{products?.at(0)?.category.name}</Subtitle>
       <div className={styles.cardsGallery__items}>
         {products?.map((product) => (
           <Card />

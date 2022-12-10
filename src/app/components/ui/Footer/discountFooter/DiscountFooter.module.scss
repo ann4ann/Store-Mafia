@@ -1,0 +1,79 @@
+.discountFooter {
+    max-width: 329px;
+
+    h4 {
+        margin: 0;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 19px;
+        letter-spacing: -0.1px;
+        color: #fff;
+        margin-bottom: 20px;
+    }
+
+    a {
+        text-decoration: underline;
+    }
+
+    h5 {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 22px;
+        letter-spacing: -0.1px;
+        color: #E3E3E3;
+        margin: 0;
+    }
+}
+
+.form {
+    max-width: 314px;
+    margin-bottom: 11px;
+
+    .formInner {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end
+    }
+
+    input {
+        max-width: 143px;
+        height: 40px;
+        border: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        background-color: inherit;
+        color: #E8E8E8;
+
+        &::placeholder {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 22px;
+            letter-spacing: -0.1px;
+            color: #E8E8E8;
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    button {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 22px;
+        text-align: center;
+        letter-spacing: -0.1px;
+        color: #FFFFFF;
+        background-color: inherit;
+        border: 1px solid #FFFFFF;
+        filter: drop-shadow(0px 2px 7px rgba(120, 137, 149, 0.25));
+        border-radius: 3px;
+        padding: 10px 23px;
+        cursor: pointer;
+        transition: all 0.5s;
+
+        &:hover{
+            background-color: #fff;
+            color: #C02336;
+        }
+    }
+}
