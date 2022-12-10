@@ -4,13 +4,14 @@ import HomePage from "./components/pages/HomePage/HomePage";
 import Footer from "./components/ui/Footer/Footer";
 import Header from "./components/ui/Header/Header";
 function App() {
+
   return (
     <div className={styles.app}>
       <Header />
       <Routes>
         <Route path="/" element={<HomePage />}></Route>
       </Routes>
-      <Footer/>
+      <Footer />
     </div>
   );
 }

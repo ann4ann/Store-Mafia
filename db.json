@@ -1,89 +1,10 @@
 {
-  "posts": [
-    {
-      "id": 1,
-      "title": "post 1",
-      "body": "typicode"
-    },
-    {
-      "id": 2,
-      "title": "post 2",
-      "body": "typicode"
-    },
-    {
-      "id": 3,
-      "title": "post 3",
-      "body": "typicode"
-    },
-    {
-      "id": 4,
-      "title": "post 4",
-      "body": "typicode"
-    },
-    {
-      "id": 5,
-      "title": "post 5",
-      "body": "typicode"
-    },
-    {
-      "id": 6,
-      "title": "post 6",
-      "body": "typicode"
-    },
-    {
-      "id": 7,
-      "title": "post 7",
-      "body": "typicode"
-    },
-    {
-      "id": 8,
-      "title": "post 8",
-      "body": "typicode"
-    },
-    {
-      "id": 9,
-      "title": "post 9",
-      "body": "typicode"
-    },
-    {
-      "id": 10,
-      "title": "post 10",
-      "body": "typicode"
-    },
-    {
-      "id": 11,
-      "title": "post 11",
-      "body": "typicode"
-    },
-    {
-      "title": "testPost",
-      "body": "testPost",
-      "id": 12
-    },
-    {
-      "title": null,
-      "body": null,
-      "id": 13
-    },
-    {
-      "title": "secTestPost",
-      "body": "secTestPost",
-      "id": 14
-    }
-  ],
-  "comments": [
-    {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
-    }
-  ],
-  "profile": {
-    "name": "typicode"
-  },
   "products": [
     {
-      "img": ["string", "string"],
+      "img": [
+        "string",
+        "string"
+      ],
       "name": "string1",
       "desc": "string",
       "price": 55,
@@ -91,10 +12,16 @@
         "rate": 4.2,
         "count": 7
       },
-      "category": { "category": "kit", "name": "Наборы" }
+      "category": {
+        "category": "kit",
+        "name": "Наборы"
+      }
     },
     {
-      "img": ["string", "string"],
+      "img": [
+        "string",
+        "string"
+      ],
       "name": "string2",
       "desc": "string",
       "price": 55,
@@ -102,10 +29,16 @@
         "rate": 4.2,
         "count": 7
       },
-      "category": { "category": "kit", "name": "Наборы" }
+      "category": {
+        "category": "kit",
+        "name": "Наборы"
+      }
     },
     {
-      "img": ["string", "string"],
+      "img": [
+        "string",
+        "string"
+      ],
       "name": "string3",
       "desc": "string",
       "price": 55,
@@ -113,10 +46,16 @@
         "rate": 4.2,
         "count": 7
       },
-      "category": { "category": "kit", "name": "Наборы" }
+      "category": {
+        "category": "kit",
+        "name": "Наборы"
+      }
     },
     {
-      "img": ["string", "string"],
+      "img": [
+        "string",
+        "string"
+      ],
       "name": "string4",
       "desc": "string",
       "price": 55,
@@ -124,10 +63,16 @@
         "rate": 4.2,
         "count": 7
       },
-      "category": { "category": "kit", "name": "Наборы" }
+      "category": {
+        "category": "kit",
+        "name": "Наборы"
+      }
     },
     {
-      "img": ["string", "string"],
+      "img": [
+        "string",
+        "string"
+      ],
       "name": "string5",
       "desc": "string",
       "price": 55,
@@ -135,10 +80,16 @@
         "rate": 4.2,
         "count": 7
       },
-      "category": { "category": "kit", "name": "Наборы" }
+      "category": {
+        "category": "kit",
+        "name": "Наборы"
+      }
     },
     {
-      "img": ["string", "string"],
+      "img": [
+        "string",
+        "string"
+      ],
       "name": "string6",
       "desc": "string",
       "price": 55,
@@ -146,7 +97,44 @@
         "rate": 4.2,
         "count": 7
       },
-      "category": { "category": "masks", "name": "Маски" }
+      "category": {
+        "category": "masks",
+        "name": "Маски"
+      }
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "username": "Ivan",
+      "password": "1238",
+      "phone": 7999999999,
+      "email": "ilya123558ilya@gmail.com"
+    },
+    {
+      "id": 2,
+      "username": "Ivan",
+      "password": "678",
+      "phone": 7999999999,
+      "email": "ilya123558ilya@gmail.com",
+      "name": {
+        "firstname": "ilya",
+        "lastname": "test"
+      }
+    },
+    {
+      "id": 3,
+      "username": "Ivan",
+      "password": "sdfsdfsdf",
+      "phone": 7999999999,
+      "email": "ilya123558ilya@gmail.com"
+    },
+    {
+      "username": "Ivan",
+      "password": "12345678",
+      "phone": 7999999999,
+      "email": "ilya123558ilya@gmail.com",
+      "id": 4
     }
   ]
 }

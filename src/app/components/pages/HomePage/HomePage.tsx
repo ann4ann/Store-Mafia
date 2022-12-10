@@ -8,6 +8,7 @@ import Wrapper from "../../ui/Wrapper/Wrapper";
 import styles from "./HomePage.module.scss";
 
 const HomePage = () => {
+
   return (
     <div className={styles.homePage}>
       <Wrapper>
@@ -72,6 +73,7 @@ const HomePage = () => {
             производим по России и странам СНГ!
           </p>
         </SectionWrapper>
+
       </Wrapper>
     </div>
   );
