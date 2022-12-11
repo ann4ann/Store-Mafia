@@ -1,20 +1,42 @@
-import React from "react";
+import { FC, useState } from "react";
 import styles from "./Sidebar.module.scss"
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
-const Sidebar = () => {
+interface item {
+    title: string,
+    link: string
+}
+
+const Sidebar: FC = () => {
+
+    const [title, setTitle] = useState('Каталог товаров')
+
+    const items: item[] = [
+        { title: 'Наборы', link: '/sets' },
+        { title: 'Маски', link: '/masks' },
+        { title: 'Номерки', link: '/numbers' },
+        { title: 'Карты', link: '/cards' },
+        { title: 'Скатерти', link: '/tablecloths' },
+        { title: 'Таблички', link: '/tablets' }, 
+        { title: 'Сувениры', link: '/souvenirs' },
+    ]
+
+    const onClickHandler = (title: string) => {
+        setTitle(title)
+    }
+
     return (
         <div className={styles.sidebar}>
-            <h1>Каталог товаров</h1>
+            <h1>{title}</h1>
             <header className={styles.navlink}>
-                <ul>
-                    <li><NavLink to="/#" className={styles.link_1}>Наборы</NavLink></li>
-                    <li><NavLink to="/#" className={styles.link_1}>Маски</NavLink></li>
-                    <li><NavLink to="/#" className={styles.link_1}>Номерки</NavLink></li>
-                    <li><NavLink to="/#" className={styles.link_1}>Карты</NavLink></li>
-                    <li><NavLink to="/#" className={styles.link_1}>Скатерти</NavLink></li>
-                    <li><NavLink to="/#" className={styles.link_1}>Таблички</NavLink></li>
-                    <li><NavLink to="/#" className={styles.link_1}>Сувениры</NavLink></li>
+                <ul className={styles.list}>
+                    {items.map(elem => (
+                        <li key={elem.title}
+                            onClick={() => onClickHandler(elem.title)}
+                            className={title === elem.title ? styles.active : styles.item} >
+                            <Link to={elem.link} className={styles.link_1}>{elem.title}</Link>
+                        </li>
+                    ))}
                 </ul>
             </header>
         </div>
