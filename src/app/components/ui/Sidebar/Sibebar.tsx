@@ -38,7 +38,7 @@ const Sidebar: FC<IProps> = ({activeTitle = 'Каталог товаров'}) =>
                         <Link to={elem.link}>
                             <li key={elem.title}
                                 onClick={() => onClickHandler(elem.title)}
-                                className={title === elem.title ? styles.active : styles.item} >
+                                className={title === elem.title ? styles.active : styles.item}>
                                 {elem.title}
                             </li>
                         </Link>
