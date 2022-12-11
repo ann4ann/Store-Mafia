@@ -7,18 +7,22 @@ interface item {
     link: string
 }
 
-const Sidebar: FC = () => {
+interface IProps {
+    activeTitle?: string
+}
 
-    const [title, setTitle] = useState('Каталог товаров')
+const Sidebar: FC<IProps> = ({activeTitle = 'Каталог товаров'}) => {
+
+    const [title, setTitle] = useState(activeTitle)
 
     const items: item[] = [
-        { title: 'Наборы', link: '/sets' },
-        { title: 'Маски', link: '/masks' },
-        { title: 'Номерки', link: '/numbers' },
-        { title: 'Карты', link: '/cards' },
-        { title: 'Скатерти', link: '/tablecloths' },
-        { title: 'Таблички', link: '/tablets' }, 
-        { title: 'Сувениры', link: '/souvenirs' },
+        { title: 'Наборы', link: '/cotalog/sets' },
+        { title: 'Маски', link: '/cotalog/masks' },
+        { title: 'Номерки', link: '/cotalog/numbers' },
+        { title: 'Карты', link: '/cotalog/cards' },
+        { title: 'Скатерти', link: '/cotalog/tablecloths' },
+        { title: 'Таблички', link: '/cotalog/tablets' },
+        { title: 'Сувениры', link: '/cotalog/souvenirs' },
     ]
 
     const onClickHandler = (title: string) => {
@@ -31,11 +35,13 @@ const Sidebar: FC = () => {
             <header className={styles.navlink}>
                 <ul className={styles.list}>
                     {items.map(elem => (
-                        <li key={elem.title}
-                            onClick={() => onClickHandler(elem.title)}
-                            className={title === elem.title ? styles.active : styles.item} >
-                            <Link to={elem.link} className={styles.link_1}>{elem.title}</Link>
-                        </li>
+                        <Link to={elem.link}>
+                            <li key={elem.title}
+                                onClick={() => onClickHandler(elem.title)}
+                                className={title === elem.title ? styles.active : styles.item}>
+                                {elem.title}
+                            </li>
+                        </Link>
                     ))}
                 </ul>
             </header>
