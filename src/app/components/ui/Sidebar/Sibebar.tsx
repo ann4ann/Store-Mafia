@@ -25,7 +25,7 @@ const Sidebar: FC<IProps> = ({activeTitle = 'Каталог товаров'}) =>
         { title: 'Сувениры', link: '/cotalog/souvenirs' },
     ]
 
-    const onClickHandler = (title: string) => {
+    const onClickHandler = (title: string) => { 
         setTitle(title)
     }
 
