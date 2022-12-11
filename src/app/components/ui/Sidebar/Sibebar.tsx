@@ -17,7 +17,7 @@ const Sidebar: FC = () => {
         { title: 'Номерки', link: '/numbers' },
         { title: 'Карты', link: '/cards' },
         { title: 'Скатерти', link: '/tablecloths' },
-        { title: 'Таблички', link: '/tablets' },
+        { title: 'Таблички', link: '/tablets' }, 
         { title: 'Сувениры', link: '/souvenirs' },
     ]
 
