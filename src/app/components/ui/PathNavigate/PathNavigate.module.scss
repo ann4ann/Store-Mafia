@@ -1,0 +1,31 @@
+.pathNavigate {
+    padding: 26px 0px;
+    background: #FFFFFF;
+}
+
+.list{
+    display: flex;
+}
+
+.item {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 18px;
+    letter-spacing: -0.0928571px;
+    color: #12212D;
+    position: relative;
+    padding-right: 14px;
+
+    &_point {
+        font-weight: 700;
+        &::before {
+            content: '';
+            position: absolute;
+            background: #000;
+            border: 2px solid #000;
+            border-radius: 50%; 
+            right: 4px;
+            top: 45%;
+        }
+    }
+}

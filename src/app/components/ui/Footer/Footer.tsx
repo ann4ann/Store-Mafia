@@ -1,6 +1,6 @@
 import Wrapper from "../Wrapper/Wrapper";
 import ContactFooter from "./contactFooter/ContactFooter";
-import CotalogFooter from "./cotalogFooter/CotalogFooter";
+import CatalogFooter from "./catalogFooter/CatalogFooter";
 import DiscountFooter from "./discountFooter/DiscountFooter";
 import styles from "./Footer.module.scss";
 import LogoInner from "./logoInner/LogoInner";
@@ -13,7 +13,7 @@ const Footer: React.FC = () => {
             <Wrapper>
                 <div className={styles.container}>
                     <LogoInner />
-                    <CotalogFooter/>
+                    <CatalogFooter/>
                     <Support/>
                     <ContactFooter/>
                     <DiscountFooter />

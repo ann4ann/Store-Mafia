@@ -1,0 +1,37 @@
+.inner {
+    display: flex;
+    justify-content: space-between;
+}
+
+.container {
+    max-width: 977px;
+}
+
+.sortInner {
+    width: 100%;
+    background: #FFFFFF;
+    border-radius: 2px;
+    padding: 14px 23px 14px 31px;
+}
+
+.discription {
+    margin: 30px 0px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    letter-spacing: -0.1px;
+    color: rgba(18, 33, 45, 0.7);
+}
+
+.list {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px 30px;
+}
+
+.listItem {
+    width: 300px;
+    height: 290px;
+    background: #000;
+}

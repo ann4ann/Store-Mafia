@@ -1,15 +1,19 @@
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, Navigate } from "react-router-dom";
 import styles from "./App.module.scss";
+import Catalog from "./components/pages/Catalog/Catalog";
 import HomePage from "./components/pages/HomePage/HomePage";
 import Footer from "./components/ui/Footer/Footer";
 import Header from "./components/ui/Header/Header";
-function App() {
+
+const App: React.FC = () => {
 
   return (
     <div className={styles.app}>
       <Header />
       <Routes>
-        <Route path="/" element={<HomePage />}></Route>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/catalog" element={<Navigate replace to="/" />} />
+        <Route path="/catalog/*" element={<Catalog />} />
       </Routes>
       <Footer />
     </div>
