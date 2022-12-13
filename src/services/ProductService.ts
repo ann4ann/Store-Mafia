@@ -33,3 +33,5 @@ export const productAPI = createApi({
     }),
   }),
 });
+
+export const { useFetchAllProductsQuery, useFetchProductByCategoryQuery } = productAPI
