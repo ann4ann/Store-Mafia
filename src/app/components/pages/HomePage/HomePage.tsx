@@ -7,13 +7,13 @@ import Sidebar from "../../ui/Sidebar/Sibebar";
 import Wrapper from "../../ui/Wrapper/Wrapper";
 import styles from "./HomePage.module.scss";
 
-const HomePage = () => {
+const HomePage: React.FC = () => {
 
   return (
     <div className={styles.homePage}>
       <Wrapper>
         <SectionWrapper mix="horizontal-small">
-          <Sidebar />
+          <Sidebar/>
           <OfferProduct />
         </SectionWrapper>
 
