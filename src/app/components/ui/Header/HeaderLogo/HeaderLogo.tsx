@@ -1,8 +1,8 @@
 import React from 'react';
-import styles from './HeaderImg.module.scss';
+import styles from './HeaderLogo.module.scss';
 import {Link} from 'react-router-dom';
 
-const HeaderImg: React.FC = () => {
+const HeaderLogo: React.FC = () => {
    const mainText = 'Тут должен быть слоган';
 
    return (
@@ -17,4 +17,4 @@ const HeaderImg: React.FC = () => {
    );
 };
 
-export default HeaderImg;
+export default HeaderLogo;
