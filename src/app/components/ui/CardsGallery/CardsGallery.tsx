@@ -1,14 +1,14 @@
-import React, {FC} from 'react';
-import {productAPI} from '../../../../services/ProductService';
-import Card from '../Card';
-import styles from './CardsGallery.module.scss';
+import React, { FC } from "react";
+import { productAPI } from "../../../../services/ProductService";
+import Card from "../Card";
+import styles from "./CardsGallery.module.scss";
 
 interface cardsGalleryProps {
    itemsCount: number;
    category: string;
 }
 
-const CardsGallery: FC<cardsGalleryProps> = ({itemsCount, category}) => {
+const CardsGallery: FC<cardsGalleryProps> = ({ itemsCount, category }) => {
    const {
       data: products,
       error: errorProduct,
