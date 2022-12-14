@@ -8,6 +8,7 @@
       "name": "string1",
       "desc": "string",
       "price": 55,
+      "type": "в наличии",
       "rate": {
         "rate": 4.2,
         "count": 7
@@ -25,6 +26,7 @@
       "name": "string2",
       "desc": "string",
       "price": 55,
+      "type": "в наличии",
       "rate": {
         "rate": 4.2,
         "count": 7
@@ -42,6 +44,7 @@
       "name": "string3",
       "desc": "string",
       "price": 55,
+      "type": "в наличии",
       "rate": {
         "rate": 4.2,
         "count": 7
@@ -59,6 +62,7 @@
       "name": "string4",
       "desc": "string",
       "price": 55,
+      "type": "в наличии",
       "rate": {
         "rate": 4.2,
         "count": 7
@@ -76,6 +80,7 @@
       "name": "string5",
       "desc": "string",
       "price": 55,
+      "type": "в наличии",
       "rate": {
         "rate": 4.2,
         "count": 7
@@ -93,6 +98,7 @@
       "name": "string6",
       "desc": "string",
       "price": 55,
+      "type": "в наличии",
       "rate": {
         "rate": 4.2,
         "count": 7

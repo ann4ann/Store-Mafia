@@ -1,4 +1,5 @@
 import { useFetchProductByCategoryQuery } from '../../../../services/ProductService';
+import CardItem from '../Card';
 import Sidebar from '../Sidebar/Sibebar';
 import styles from './CatalogContent.module.scss'
 
@@ -18,11 +19,14 @@ const CatalogContent: React.FC<IProps> = ({ link, discription, title }) => {
             <div className={styles.container}>
                 <div className={styles.sortInner}>sort</div>
                 <p className={styles.discription}>{discription}</p>
-                {isLoading ? <>loading</>
+                {isLoading ?
+                    <>loading</>
                     : (data && data.length > 0
                         ?
                         <ul className={styles.list}>
-                            {data?.map((elem, index) => <li key={index} className={styles.listItem}>{index}</li>)}
+                            {data?.map((elem, index) => <li key={index} className={styles.listItem}>
+                                <CardItem name={elem.name} price={elem.price} type={elem.type}/>
+                                </li>)}
                         </ul>
                         :
                         <div>нет элементов</div>
