@@ -1,7 +1,7 @@
 import React from 'react';
-import styles from './HeaderNumber.module.scss';
+import styles from './HeaderContacts.module.scss';
 
-const HeaderNumber: React.FC = () => {
+const HeaderContacts: React.FC = () => {
    return (
       <div className={styles.number}>
          <p>8(064)765-23-34</p>
@@ -10,4 +10,4 @@ const HeaderNumber: React.FC = () => {
    );
 };
 
-export default HeaderNumber;
+export default HeaderContacts;

@@ -1,0 +1,99 @@
+.input {
+   position: absolute;
+   display: flex;
+   position: relative;
+   align-items: center;
+   margin-left: 15%;
+   margin-right: 4rem;
+   width: 49%;
+
+   div {
+      // width: 26.49vw;
+      width: 100%;
+      z-index: 5;
+
+      &.fixed {
+         position: fixed;
+         width: 25.59vw;
+      }
+
+      input {
+         border: 1px solid grey;
+         border-radius: 4px;
+         width: 100%;
+         padding: 0.87rem;
+         font-size: 17px;
+         background: url('./search.svg') no-repeat;
+         background-size: 20px;
+         background-position: 97% 50%;
+         background-color: white;
+         z-index: 3;
+
+         &:focus-visible {
+            outline: none;
+         }
+      }
+
+      .input_search {
+         opacity: 0;
+         visibility: hidden;
+         position: absolute;
+         top: 20%;
+         margin-top: 2.3rem;
+         border: 1px solid grey;
+         border-top: none;
+         width: 100%;
+         border-bottom-left-radius: 10px;
+         max-height: 9rem;
+         overflow-y: auto;
+         padding: 0.5rem;
+         background: white;
+         box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1),
+            0 4px 6px -4px rgb(0 0 0 / 0.1);
+         border-bottom-left-radius: 0.25rem;
+         border-bottom-right-radius: 0.25rem;
+         transition-delay: 0.2s;
+         transition: visibility 0.2s linear, opacity 0.2s linear;
+         scrollbar-color: rgba(255, 255, 255, 0.785) #d12c37;
+         z-index: 3;
+
+         &.visible {
+            opacity: 1;
+            visibility: visible;
+         }
+
+         li {
+            padding: 1rem;
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1),
+               0 4px 6px -4px rgb(0 0 0 / 0.1);
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            margin-top: 0.5rem;
+
+            &:hover {
+               border-radius: 10px;
+               background: rgba(0, 0, 0, 0.072);
+            }
+         }
+      }
+   }
+
+   .backdrop {
+      opacity: 0;
+      visibility: hidden;
+      position: fixed;
+      z-index: 1;
+      background-color: rgba(0, 0, 0, 0.623);
+      width: 100vw;
+      height: 100vh;
+      top: 0;
+      left: 0;
+      transition: visibility 0.3s linear, opacity 0.3s linear;
+      transition-delay: 0.2s;
+
+      &.active {
+         opacity: 1;
+         visibility: visible;
+      }
+   }
+}

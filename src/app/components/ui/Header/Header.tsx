@@ -3,9 +3,9 @@ import Wrapper from '../Wrapper/Wrapper';
 import Navbar from '../Navbar/Navbar';
 import styles from './Header.module.scss';
 
-import HeaderImg from './HeaderImg';
-import HeaderInput from './HeaderInput';
-import HeaderNumber from './HeaderNumber';
+import HeaderLogo from './HeaderLogo';
+import HeaderSearchBar from './HeaderSearchBar';
+import HeaderContacts from './HeaderContacts';
 import HeaderLogIn from './HeaderLogIn';
 
 const Header: React.FC = () => {
@@ -13,11 +13,11 @@ const Header: React.FC = () => {
       <div className={styles.header}>
          <Wrapper>
             <div className={styles.container}>
-               <HeaderImg />
+               <HeaderLogo />
                <div className={styles.inner}>
-                  <HeaderInput />
+                  <HeaderSearchBar />
                   <div className={styles.drop_down}>
-                     <HeaderNumber />
+                     <HeaderContacts />
                      <div className={styles.line}></div>
                      <HeaderLogIn />
                   </div>
