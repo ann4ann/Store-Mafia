@@ -1,29 +1,30 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./card.scss";
 
-const data = {
-  aviability: "в наличии",
-  price: "590 руб",
-  productName: "Номерки для игры мафия «Сицилия»",
-};
-const CardItem = () => {
-  const { aviability, price, productName } = data;
+interface IProps {
+  price: number,
+  name: string,
+  type: string
+}
+
+const CardItem: React.FC<IProps> = ({ name, price, type}) => {
   return (
     <div className="card">
       <div className="card-item">
-        <span>{aviability}</span>
+        <span>{type}</span>
         <img
           src="http://course.fudzi.kz/numerok.jpg"
-          alt={productName}
+          alt={name}
           className="product-img"
         />
       </div>
-      <span>{productName}</span>
+      <span>{name}</span>
       <div className="card-footer">
         <span className="price">Цена: {price}</span>
-        <a href="https://google.com" className="btn">
+        <Link to="/" className="btn">
           Купить
-        </a>
+        </Link>
       </div>
     </div>
   );

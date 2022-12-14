@@ -21,7 +21,7 @@ const CardsGallery: FC<cardsGalleryProps> = ({ itemsCount, category }) => {
       <Subtitle mix="center">{products?.at(0)?.category.name}</Subtitle>
       <div className={styles.cardsGallery__items}>
         {products?.map((product) => (
-          <Card />
+          <Card name={product.name} price={product.price} type={product.type}/>
         ))}
       </div>
       <div className={styles.cardsGallery__pagination}>
