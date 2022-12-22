@@ -31,7 +31,15 @@ export const productAPI = createApi({
         url: `/products/${id}`,
       }),
     }),
+
+    // fetchProductsForUserCard: build.query<>({
+    //   query: () => ({
+    //     // url: `/products?_embed`,
+    //     // url: `/products?_embed`,
+    //   }),
+    // }),
   }),
 });
 
-export const { useFetchAllProductsQuery, useFetchProductByCategoryQuery } = productAPI
+export const { useFetchAllProductsQuery, useFetchProductByCategoryQuery } =
+  productAPI;

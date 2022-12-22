@@ -4,16 +4,21 @@ import CardsGallery from "../../ui/CardsGallery/CardsGallery";
 import OfferProduct from "../../ui/OfferProduct/OfferProduct";
 import SaleCard from "../../ui/SaleCard/SaleCard";
 import Sidebar from "../../ui/Sidebar/Sibebar";
+import TableBasket from "../../ui/TableBasket/TableBasket";
 import Wrapper from "../../ui/Wrapper/Wrapper";
 import styles from "./HomePage.module.scss";
 
 const HomePage: React.FC = () => {
-
   return (
     <div className={styles.homePage}>
       <Wrapper>
+        {/* Delete!!! */}
+        {/* <SectionWrapper mix="vertical-small">
+          <TableBasket />
+        </SectionWrapper> */}
+        {/* Delete!!! */}
         <SectionWrapper mix="horizontal-small">
-          <Sidebar/>
+          <Sidebar />
           <OfferProduct />
         </SectionWrapper>
 
@@ -73,7 +78,6 @@ const HomePage: React.FC = () => {
             производим по России и странам СНГ!
           </p>
         </SectionWrapper>
-
       </Wrapper>
     </div>
   );
