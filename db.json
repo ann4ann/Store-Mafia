@@ -1,10 +1,8 @@
 {
   "products": [
     {
-      "img": [
-        "string",
-        "string"
-      ],
+      "id": 1,
+      "img": ["string", "string"],
       "name": "string1",
       "desc": "string",
       "price": 55,
@@ -19,10 +17,8 @@
       }
     },
     {
-      "img": [
-        "string",
-        "string"
-      ],
+      "id": 2,
+      "img": ["string", "string"],
       "name": "string2",
       "desc": "string",
       "price": 55,
@@ -37,10 +33,8 @@
       }
     },
     {
-      "img": [
-        "string",
-        "string"
-      ],
+      "id": 3,
+      "img": ["string", "string"],
       "name": "string3",
       "desc": "string",
       "price": 55,
@@ -55,10 +49,8 @@
       }
     },
     {
-      "img": [
-        "string",
-        "string"
-      ],
+      "id": 4,
+      "img": ["string", "string"],
       "name": "string4",
       "desc": "string",
       "price": 55,
@@ -73,10 +65,8 @@
       }
     },
     {
-      "img": [
-        "string",
-        "string"
-      ],
+      "id": 5,
+      "img": ["string", "string"],
       "name": "string5",
       "desc": "string",
       "price": 55,
@@ -91,10 +81,8 @@
       }
     },
     {
-      "img": [
-        "string",
-        "string"
-      ],
+      "id": 6,
+      "img": ["string", "string"],
       "name": "string6",
       "desc": "string",
       "price": 55,
@@ -141,6 +129,36 @@
       "phone": 7999999999,
       "email": "ilya123558ilya@gmail.com",
       "id": 4
+    }
+  ],
+  "cart": [
+    {
+      "id": 1,
+      "userId": 1,
+      "items": [
+        {
+          "productId": 1,
+          "quantity": 2
+        },
+        {
+          "productId": 2,
+          "quantity": 1
+        },
+        {
+          "productId": 6,
+          "quantity": 3
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "userId": 3,
+      "items": [
+        {
+          "productId": 4,
+          "quantity": 2
+        }
+      ]
     }
   ]
 }
