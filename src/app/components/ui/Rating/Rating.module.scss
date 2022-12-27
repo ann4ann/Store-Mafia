@@ -1,0 +1,33 @@
+.ratingInner{
+    display: flex;
+    align-items: center;
+}
+
+.items{
+    display: flex;
+}
+
+.item{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    svg{
+        transition: all 0.3s;
+        fill: rgba(255, 195, 26, 0.36);
+    }
+}
+.itemStatical{
+    display: flex;
+    align-items: center;
+    svg{
+        transition: all 0.3s;
+        fill: rgba(255, 195, 26, 0.36);
+    }
+}
+
+.hover{
+    svg{
+        transition: all 0.3s;
+        fill: orange
+    }
+}

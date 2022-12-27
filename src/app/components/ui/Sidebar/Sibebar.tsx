@@ -29,8 +29,8 @@ const Sidebar: FC<IProps> = ({ link = '' }) => {
             <header className={styles.navlink}>
                 <ul className={styles.list}>
                     {items.map(elem => (
-                        <Link to={'/catalog/' + elem.link}>
-                            <li key={elem.title}
+                        <Link key={elem.title} to={'/catalog/' + elem.link}>
+                            <li 
                                 className={link === elem.link ? styles.active : styles.item}>
                                 {elem.title}
                             </li>

@@ -1,12 +1,12 @@
 import React from 'react';
-import styles from './CardDetailDetailsDescription.module.scss'
+import styles from './CardInfoDescription.module.scss'
 
 interface Props {
     title: string,
     text: string
 }
 
-const CardDetailDetailsDescription: React.FC<Props> = ({title, text}) => {
+const CardInfoDescription: React.FC<Props> = ({title, text}) => {
     return (
         <div className={styles.descriptionContainer}>
             <h3 className={styles.title}>{title}</h3>
@@ -15,4 +15,4 @@ const CardDetailDetailsDescription: React.FC<Props> = ({title, text}) => {
     );
 };
 
-export default CardDetailDetailsDescription;
+export default CardInfoDescription;

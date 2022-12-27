@@ -6,6 +6,11 @@
     justify-content: space-between;
 }
 
+.container {
+    max-width: 560px;
+    width: 100%;
+}
+
 ul,
 li {
     margin: 0;
@@ -17,7 +22,6 @@ li {
     border: 1px solid #B7BCC0;
     border-radius: 2px;
     background-color: #fff;
-    max-width: 560px;
     width: 100%;
     padding: 13px;
     font-size: 14px;
@@ -25,5 +29,12 @@ li {
     letter-spacing: -0.1px;
     color: #12212D;
     cursor: pointer;
-    
+    transition: all 0.5s;
+
+    &:hover {
+        scale: 1.1;
+        background:  #C02336;
+        color: white;
+        border-color: inherit;
+    }
 }

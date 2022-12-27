@@ -1,31 +1,28 @@
 import React from 'react';
-import styles from './CardDetailDetailsTop.module.scss'
+import styles from './CardInfoToggle.module.scss'
 
-interface IListItem {
-    title: string,
-}
+interface IListItem {title: string}
 
 interface Props {
     indexActive: number,
     onClickHandler: (index: number) => void,
+    reviewsLength: number
 }
 
-const CardDetailDetailsTop: React.FC<Props> = ({indexActive, onClickHandler}) => {
-
-    const reviewsValue: number = 18
+const CardInfoToggle: React.FC<Props> = ({ indexActive, onClickHandler, reviewsLength }) => {
 
     const listItems: IListItem[] = [
         { title: 'Описание' },
-        { title: `Отзывы${reviewsValue ? `(${reviewsValue})` : ''}`},
+        { title: `Отзывы${reviewsLength ? `(${reviewsLength})` : ''}` },
     ]
 
     return (
-        <div className={styles.togleContainer}>
+        <div className={styles.toggleContainer}>
             {listItems.map((elem: IListItem, index: number) => (
                 <button
                     key={index}
                     onClick={() => onClickHandler(index)}
-                    className={indexActive === index? `${styles.btn} ${styles.active}`:styles.btn}>
+                    className={indexActive === index ? `${styles.btn} ${styles.active}` : styles.btn}>
                     {elem.title}
                 </button>
             ))}
@@ -33,4 +30,4 @@ const CardDetailDetailsTop: React.FC<Props> = ({indexActive, onClickHandler}) =>
     );
 };
 
-export default CardDetailDetailsTop;
+export default CardInfoToggle;
