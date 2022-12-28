@@ -1,10 +1,7 @@
-.wrapper {
-    margin: 20px;
-}
-
 .mainImg {
     width: 550px;
     height: 280px;
+    position: relative;
 }
 
 .firstImg {
@@ -14,35 +11,66 @@
 
 .text {
     position: absolute;
-    left: 30em;
-    top: 5em;
+    right: 20px;
+    top: 20px;
     background-color: #75D67E;
-    width: 82px;
-    height: 25px;
     text-align: center;
+
+    span {
+        font-size: 14px;
+        line-height: 19px;
+        letter-spacing: -0.1px;
+        color: #FFFFFF;
+        padding: 3px 13px;
+    }
 }
 
 .secondImg {
-    display: flex;
-    width: 524px;
     margin-top: 10px;
+    overflow: hidden;
+}
+
+.items {
+    width: 495px;
+    display: flex;
+    transition: all 0.5s;
+}
+
+.item {
+    width: 155px;
+    height: 104px;
+    margin-right: 13px;
 }
 
 .secondaryImg {
-    height: 100px;
-    margin-right: 10px;
-    width: 160px;
+    height: 104px;
+    width: 155px;
+    cursor: pointer;
+    transition: all 0.3s;
+
+    &:hover {
+        scale: 1.05;
+    }
 }
 
 .btn {
-    width: 100px;
-    height: 100px;
+    width: 50px;
+    height: 104px;
     border: 1px solid #B7BCC0;
     border-radius: 2px;
     cursor: pointer;
+    margin-top: 10px;
+    transition: all 0.5s;
+
+    &:hover {
+        border-color: navajowhite;
+        background-color: #fff;
+        scale: 1.05;
+    }
 }
 
-.arrow {
-    width: 25px;
-    height: 9px;
+.galeryInner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }

@@ -1,61 +1,57 @@
-import React, {FC, useState} from 'react'
+import { useState } from 'react'
+import { IProduct } from '../../../../models/IProduct'
+import Rating from '../Rating/Rating'
 import style from './CardDetailDesc.module.scss'
 
 
-export const CardDetailDesc: FC = () => {
-    const data = {
-        text: 'Цена',
-        money: ' ₽',
-        status: 'Заканчивается',
-        article: 'Арт. U303303303',
-        category: 'Категория Таблички',
-        description: 'Таблички для фотосессий на игре мафия. Материал – ПВХ. Размер 20*30 см. Различные варианты текста. Golden Mafia – качественный реквизит для игры в мафию. Сделано в России.'
-    }
 
+export const CardDetailDesc: React.FC<IProduct> = (data) => {
+
+    const [price, setPrice] = useState(data.price)
     const [count, setCount] = useState(1)
 
-    const increment = () => {
-        if(count < 10)
-        setCount(count + 1)
+    const onClickHandlerInc = () => {
+        setPrice(prev => prev + data.price)
+        setCount(prev => prev + 1)
     }
 
-    const decrement = () => {
-        if(count !== 0)
-        setCount(count - 1)
+    const onClickHandlerDec = () => {
+        setPrice(prev => prev - data.price)
+        setCount(prev => prev - 1)
     }
 
-    const [price, setPrice] = useState(590)
-
-    const incPrice = () => {
-        if(price !== 5900)
-        setPrice(price + 590)
-    }
-
-   const decPrice = () => {
-        if(price !== 0)
-        setPrice(price - 590)
-   }
-
-
-    return(
+    return (
         <div className={style.wrapper}>
             <div className={style.firstDiv}>
-                <p>{data.text}</p>
-                <p>{price} {data.money}</p>
-                <button onClick={ (event:any) => {decrement()
-                decPrice() } } className={style.minus} >-</button>
-                <p>{count} шт.</p>
-                <button onClick={ (event:any) => {
-                    increment()
-                    incPrice() }} className={style.plus}>+</button>
-                <input type='submit' value='Купить' />
-                <span>{data.status}</span>
+                <div className={style.priceInner}>
+                    <p className={style.priceText}>Цена</p>
+                    <p className={style.price}>{price} ₽</p>
+                </div>
+                <div className={style.countInner}>
+                    <button
+                        className={style.btn}
+                        disabled={count === 1 ? true : false}
+                        onClick={onClickHandlerDec}
+                    >-</button>
+                    <p className={style.count}>{count} шт.</p>
+                    <button className={style.btn} onClick={onClickHandlerInc}>+</button>
+                </div>
+                <button className={style.btnPay}>Купить</button>
+                <p className={style.text} >{data.type}</p>
             </div>
             <div className={style.secondDiv}>
-                
-                <div>{data.article}</div>
-                <div>{data.category}</div>
-                <p>{data.description}</p>
+                <div className={style.ratingInner}>
+                    <Rating value={4} starLength={19} />
+                </div>
+                <div className={style.textInner}>
+                    <p>Арт. U303303303</p>
+                    <p>Категория {data.category.name}</p>
+                </div>
+                <p className={style.description}>
+                    Таблички для фотосессий на игре мафия. Материал – ПВХ. Размер 20*30 см.
+                    Различные варианты текста. Golden Mafia – качественный
+                    реквизит для игры в мафию. Сделано в России.
+                </p>
             </div>
         </div>
     )

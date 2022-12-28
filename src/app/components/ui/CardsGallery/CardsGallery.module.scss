@@ -6,6 +6,7 @@
     line-height: 27px;
     text-align: center;
   }
+
   &__items {
     margin-top: 30px;
     padding-bottom: 30px;
@@ -14,11 +15,12 @@
     gap: 30px;
     border-bottom: 1px solid #b7bcc0;
   }
+
   &__pagination {
     display: flex;
     justify-content: center;
 
-    & > button {
+    &>button {
       background-color: rgba($color: #000000, $alpha: 0);
       width: 60px;
       height: 60px;
@@ -27,4 +29,13 @@
       border: 1px solid #b7bcc0;
     }
   }
+}
+
+.subtitleInner {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 27px;
+  text-align: center;
+  letter-spacing: -0.78px;
+  color: #705658;
 }

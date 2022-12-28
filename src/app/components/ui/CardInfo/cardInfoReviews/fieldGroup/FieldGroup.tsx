@@ -50,7 +50,7 @@ const FieldGroup: React.FC<{ productId: number }> = ({ productId }) => {
 
     return (
         <>
-            {visible && <SacsesReview setVisible={setVisible} />}
+            {visible && <SacsesReview title='Ваш отзыв отправлен' setVisible={setVisible} />}
             <form className={styles.form} onSubmit={e => e.preventDefault()}>
                 {inputList.map((elem: IInputItem) => (
                     <div key={elem.title} className={styles.inputInner}>
