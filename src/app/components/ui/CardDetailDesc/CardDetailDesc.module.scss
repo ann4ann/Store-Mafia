@@ -1,78 +1,139 @@
 .wrapper {
-    width: 750px;
-    height: 400px;
+    max-width: 726px;
+    background: #FFFFFF;
+    border-radius: 2px;
+    padding: 10px 33px 66px;
+}
 
-    .firstDiv {
-        display: flex;
-        height: 110px;
-        border-bottom: 1px solid #B7BCC0;
-        text-align: center;
-        justify-content: space-around;
+.firstDiv {
+    display: flex;
+    border-bottom: 1px solid #B7BCC0;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 10px;
+}
 
-        p {
-            text-align: center;
-            font-size: 24px;
-            margin: auto 0 auto 0;
-            font-weight: 600;
-        }
+.priceInner {
+    display: flex;
+    align-items: center;
 
-        button {
-            width: 30px;
-            height: 30px;
-            margin: auto 0 auto 0;
-        }
-
-        .minus:active {
-            background-color: red;
-        }
-
-        .plus:active {
-            background-color: greenyellow;
-        }
-
-        button:hover {
-            cursor: pointer;
-        }
-
-        input {
-            width: 170px;
-            height: 45px;
-            margin: auto 0 auto 0;
-            background-color: #E75B65;
-            color: #fff;
-            border: 1px solid #fff;
-            font-weight: 600;
-            font-size: 14px;
-        }
-
-        input:active {
-            border: rgb(117, 3, 3);
-            background-color: rgb(117, 3, 3);
-        }
-
-        input:hover {
-            cursor: pointer;
-        }
-
-        span {
-            margin: auto 0 auto 0;
-            color: #D57B1C;
-        }
+    p {
+        display: inline-block;
     }
 
-    .secondDiv {
-        margin: 30px;
+    max-width: 160px;
+    width: 100%;
+}
 
-        div {
-            margin: 20px;
-            font-size: 14px;
-            font-weight: 600;
-        }
+.priceText {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 33px;
+    letter-spacing: -0.1px;
+    color: rgba(18, 33, 45, 0.7);
+}
 
-        p {
-            margin: 20px;
-            font-size: 14px;
-            line-height: 24px;
-        }
+.price {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 22px;
+    text-align: center;
+    letter-spacing: -0.14px;
+    color: #12212D;
+    margin-left: 20px;
+}
+
+.countInner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn {
+    background: #fff;
+    padding: 0;
+    margin: 0;
+    border: 1px solid #B7BCC0;
+    border-radius: 2px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 19px;
+    text-align: center;
+    letter-spacing: -0.1px;
+    color: #12212D;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s;
+
+    &:hover {
+        scale: 1.05;
+        border-color: #D57B1C;
+        color: #D57B1C;
     }
+}
+
+.count {
+    font-size: 14px;
+    line-height: 19px;
+    text-align: center;
+    letter-spacing: -0.1px;
+    color: #12212D;
+    padding: 0 18px;
+}
+
+.btnPay {
+    width: 170px;
+    height: 45px;
+    font-size: 14px;
+    line-height: 19px;
+    text-align: center;
+    letter-spacing: -0.1px;
+    color: #FFFFFF;
+    padding: 13px 61px;
+    background: linear-gradient(212.42deg, #E75B65 -88.04%, #D12C37 130.2%);
+    box-shadow: 0px 2px 7px rgba(120, 137, 149, 0.254784);
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all 0.5s;
+
+    &:hover {
+        scale: 1.05;
+    }
+}
+
+.text {
+    font-family: 'Avenir Next';
+    font-size: 14px;
+    line-height: 19px;
+    text-align: center;
+    color: #D57B1C;
+}
+
+.ratingInner {
+    padding: 34px 0px 18px;
+}
+
+.textInner {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 19px;
+    text-align: center;
+    letter-spacing: -0.1px;
+    color: #12212D;
+    text-align: start;
+    margin: 0;
+}
+
+.description {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: -0.1px;
+    color: #12212D;
+    mix-blend-mode: normal;
+    opacity: 0.6;
 }

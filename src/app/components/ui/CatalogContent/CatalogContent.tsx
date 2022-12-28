@@ -25,7 +25,7 @@ const CatalogContent: React.FC<IProps> = ({ link, discription, title }) => {
                         ?
                         <ul className={styles.list}>
                             {data?.map((elem, index) => <li key={index} className={styles.listItem}>
-                                <CardItem name={elem.name} price={elem.price} type={elem.type}/>
+                                <CardItem {...elem}/>
                                 </li>)}
                         </ul>
                         :

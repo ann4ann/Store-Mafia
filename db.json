@@ -3,8 +3,10 @@
     {
       "id": 1,
       "img": [
-        "string",
-        "string"
+        "string1",
+        "string2",
+        "string3",
+        "string4"
       ],
       "name": "string1",
       "desc": "string",
@@ -211,6 +213,22 @@
       "rate": 4,
       "text": "Норм товар",
       "id": 4
+    },
+    {
+      "name": "Name",
+      "productId": 3,
+      "email": "@gmail.com",
+      "rate": 4,
+      "text": "Товар норм",
+      "id": 5
+    },
+    {
+      "name": "Ilya",
+      "productId": 3,
+      "email": "@gmail.com",
+      "rate": 2,
+      "text": "Товар не норм(",
+      "id": 6
     }
   ]
 }

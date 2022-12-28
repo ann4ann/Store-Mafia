@@ -41,5 +41,5 @@ export const productAPI = createApi({
   }),
 });
 
-export const { useFetchAllProductsQuery, useFetchProductByCategoryQuery } =
+export const { useFetchAllProductsQuery, useFetchProductByCategoryQuery, useFetchProductByIdQuery } =
   productAPI;

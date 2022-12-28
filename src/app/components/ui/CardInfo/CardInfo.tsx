@@ -30,8 +30,7 @@ const CardInfo: React.FC<IProps> = (props) => {
   }, [limit, props, fetchReviews])
 
   return (
-    <Wrapper>
-      
+    <>
       {!isLoading
         ?
         <div className={styles.container}>
@@ -56,7 +55,7 @@ const CardInfo: React.FC<IProps> = (props) => {
         :
         <div>loading</div>
       }
-    </Wrapper>
+    </>
   );
 };
 

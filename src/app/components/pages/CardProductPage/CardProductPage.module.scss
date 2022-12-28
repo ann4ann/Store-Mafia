@@ -1,0 +1,26 @@
+.title {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 41px;
+    letter-spacing: -0.8px;
+    color: #705658;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.cardDetails{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.cardsGalleryInner{
+    margin-top: 30px;
+}
+
+.Error, .Loading{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 600px;
+}
