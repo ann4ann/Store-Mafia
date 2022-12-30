@@ -1,3 +1,5 @@
+
+import { useLocation } from 'react-router-dom'
 import { useFetchProductByIdQuery } from '../../../../services/ProductService';
 import { CardDetailDesc } from '../../ui/CardDetailDesc/CardDetailDesc';
 import { CardDetailGalery } from '../../ui/CardDetailGalery/CardDetailGalery';
@@ -9,18 +11,19 @@ import styles from './CardProductPage.module.scss';
 
 const CardProductPage: React.FC = () => {
 
-    const { data, isError } = useFetchProductByIdQuery(Number(window.location.pathname.split('/').reverse()[0]))
+    const { data, isError, isLoading } = useFetchProductByIdQuery(Number(useLocation().pathname.split('/').reverse()[0]))
+
     return (
         <section className={styles.cardProductPage}>
-            {data
+            {data && !isLoading
                 ?
                 <>
                     <PathNavigate items={['Главная страница', data.category.name, data.name]} />
                     <Wrapper>
                         <h2 className={styles.title}>{data.name}</h2>
                         <div className={styles.cardDetails}>
-                            <CardDetailGalery type={data.type} img={data.img}/>
-                            <CardDetailDesc {...data}/>
+                            <CardDetailGalery type={data.type} img={data.img} />
+                            <CardDetailDesc {...data} />
                         </div>
                         <CardInfo {...data} />
                         <div className={styles.cardsGalleryInner}>
