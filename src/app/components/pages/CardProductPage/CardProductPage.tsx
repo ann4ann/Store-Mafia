@@ -8,10 +8,19 @@ import CardsGallery from '../../ui/CardsGallery/CardsGallery';
 import PathNavigate from '../../ui/PathNavigate/PathNavigate';
 import Wrapper from '../../ui/Wrapper/Wrapper';
 import styles from './CardProductPage.module.scss';
+import { useEffect } from 'react'
 
 const CardProductPage: React.FC = () => {
 
     const { data, isError, isLoading } = useFetchProductByIdQuery(Number(useLocation().pathname.split('/').reverse()[0]))
+
+    useEffect(() => {
+        window.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: 'smooth',
+        });
+    }, [useLocation().pathname])
 
     return (
         <section className={styles.cardProductPage}>

@@ -1,15 +1,41 @@
-import React, { FC, useState } from "react";
+import { ICart, productItem } from "../../../../models/ICart";
+import { useUpdateCartByIdMutation } from "../../../../services/CartService";
 import style from "./AddItem.module.scss";
 
-export const AddItem: FC<{ quantity: number }> = ({ quantity }) => {
-  const [count, setCount] = useState(quantity);
+interface IProps {
+  quantity: number,
+  id: number,
+  items: productItem[],
+  productId: number,
+  cart: ICart
+}
 
-  const handleDec = () => {
-    if (count < 10) setCount(count + 1);
+export const AddItem: React.FC<IProps> = ({
+  quantity, id, items, productId, cart
+}) => {
+
+  const [updateCartById] = useUpdateCartByIdMutation()
+
+  const handleDec = async () => {
+    if (quantity < 9) {
+      await updateCartById([id, [cart, items.map(elem => {
+        if (elem.productId === productId) {
+          return { ...elem, quantity: quantity + 1 }
+        }
+        return elem
+      })]])
+    }
   };
 
-  const handleInc = () => {
-    if (count !== 0) setCount(count - 1);
+  const handleInc = async () => {
+    if (quantity !== 1) {
+      await updateCartById([id, [cart, items.map(elem => {
+        if (elem.productId === productId) {
+          return { ...elem, quantity: quantity - 1 }
+        }
+        return elem
+      })]])
+    }
   };
 
   return (
@@ -22,7 +48,7 @@ export const AddItem: FC<{ quantity: number }> = ({ quantity }) => {
       >
         -
       </button>
-      <span>{count} шт. </span>
+      <span>{quantity} шт. </span>
       <button
         className={style.btn}
         onClick={(event: any) => {

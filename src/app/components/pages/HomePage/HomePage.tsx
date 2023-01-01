@@ -7,8 +7,18 @@ import Sidebar from "../../ui/Sidebar/Sibebar";
 import TableBasket from "../../ui/TableBasket/TableBasket";
 import Wrapper from "../../ui/Wrapper/Wrapper";
 import styles from "./HomePage.module.scss";
+import { useEffect } from 'react'
 
 const HomePage: React.FC = () => {
+
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'smooth',
+    });
+  }, [])
+
   return (
     <div className={styles.homePage}>
       <Wrapper>

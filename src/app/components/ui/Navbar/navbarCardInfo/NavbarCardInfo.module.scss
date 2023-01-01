@@ -4,10 +4,9 @@
 }
 
 .svgInner {
-    margin-right: 20px;
     position: relative;
 
-    svg {
+    &.basketIcon {
         cursor: pointer;
     }
 
@@ -68,4 +67,8 @@
     color: #FFFFFF;
     margin: 0;
     padding: 0;
+}
+
+.infoInner{
+    margin-left: 20px;
 }

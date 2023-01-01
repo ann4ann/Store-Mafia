@@ -1,11 +1,15 @@
 import { useState } from 'react'
 import { IProduct } from '../../../../models/IProduct'
+import { useFetchCartByIdQuery, useUpdateCartByIdMutation } from '../../../../services/CartService'
 import Rating from '../Rating/Rating'
 import style from './CardDetailDesc.module.scss'
 
 
 
 export const CardDetailDesc: React.FC<IProduct> = (data) => {
+
+    const { data: cart, isLoading } = useFetchCartByIdQuery(1)
+    const [updateCartById] = useUpdateCartByIdMutation()
 
     const [price, setPrice] = useState(data.price)
     const [count, setCount] = useState(1)
@@ -18,6 +22,30 @@ export const CardDetailDesc: React.FC<IProduct> = (data) => {
     const onClickHandlerDec = () => {
         setPrice(prev => prev - data.price)
         setCount(prev => prev - 1)
+    }
+
+    const payProductHandler = async() => {
+        if (cart && !isLoading) {
+            const item = cart[0].items.find(elem => elem.productId === data.id)
+
+            if (item) {
+                const items = cart[0].items.map(elem => {
+                    if (elem.productId === data.id) {
+                        return { ...elem, quantity: elem.quantity + count }
+                    }
+                    return elem
+                })
+                await updateCartById([1, [cart[0], items]])
+            }
+            else {
+                await updateCartById([1, [cart[0], [...cart[0].items, {
+                    price: data.price,
+                    quantity: count,
+                    productId: data.id
+                }]]])
+            }
+            await setCount(1)
+        }
     }
 
     return (
@@ -36,7 +64,7 @@ export const CardDetailDesc: React.FC<IProduct> = (data) => {
                     <p className={style.count}>{count} шт.</p>
                     <button className={style.btn} onClick={onClickHandlerInc}>+</button>
                 </div>
-                <button className={style.btnPay}>Купить</button>
+                <button className={style.btnPay} onClick={() => payProductHandler()}>Купить</button>
                 <p className={style.text} >{data.type}</p>
             </div>
             <div className={style.secondDiv}>

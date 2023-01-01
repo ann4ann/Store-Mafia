@@ -1,5 +1,6 @@
-import { Route, Routes, Navigate } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import styles from "./App.module.scss";
+import BasketPage from "./components/pages/BasketPage/BasketPage";
 import Catalog from "./components/pages/Catalog/CatalogNavigate";
 import HomePage from "./components/pages/HomePage/HomePage";
 import Footer from "./components/ui/Footer/Footer";
@@ -13,6 +14,7 @@ const App: React.FC = () => {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/catalog/*" element={<Catalog />} />
+        <Route path="/basket" element={<BasketPage />} />
       </Routes>
       <Footer />
     </div>

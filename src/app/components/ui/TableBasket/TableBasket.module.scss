@@ -1,7 +1,5 @@
 .wrapper {
-  // delete
-  width: 908px;
-  // d
+  width: 100%;
 }
 
 @mixin tableRow {
@@ -44,16 +42,5 @@
       opacity: 0.1;
       border-radius: 2px;
     }
-  }
-
-  &__row {
-    @include tableRow;
-
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 19px;
-    letter-spacing: -0.1px;
-    text-align: left;
-    border-bottom: 1px solid #b7bcc0;
   }
 }
