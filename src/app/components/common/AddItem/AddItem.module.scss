@@ -4,4 +4,13 @@
     margin: 5px;
     border: 1px solid #B7BCC0;
     border-radius: 2px;
+    cursor: pointer;
+    transition: all 0.5s;
+    background-color: #fff;
+
+    &:hover{
+        scale: 1.05;
+        border-color: #D57B1C;
+        color: #D57B1C;
+    }
 }

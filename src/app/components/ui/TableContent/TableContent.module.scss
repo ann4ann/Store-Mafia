@@ -1,0 +1,78 @@
+.tableWrapper {
+    padding: 30px 30px 40px;
+    background-color: #fff;
+    border-radius: 2px;
+}
+
+
+.priceInfo {
+    max-width: 185px;
+    width: 100%;
+    margin-right: 20px;
+    margin-left: auto;
+    margin-top: 43px;
+
+    .priceInner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .text {
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 19px;
+            letter-spacing: -0.1px;
+            color: rgba(18, 33, 45, 0.7);
+        }
+
+        .discount {
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 18px;
+            color: #12212D;
+        }
+
+        .price {
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 22px;
+            letter-spacing: -0.142857px;
+            color: #D93C47;
+        }
+    }
+}
+
+.btnInner {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+
+    .returnLink {
+        font-size: 14px;
+        line-height: 42px;
+        letter-spacing: -0.1px;
+        color: #12212D;
+        mix-blend-mode: normal;
+        opacity: 0.4;
+        margin-right: 19px;
+    }
+
+    .btn {
+        padding: 16px 45px;
+        font-size: 14px;
+        line-height: 19px;
+        letter-spacing: -0.1px;
+        color: #FFFFFF;
+        background: linear-gradient(212.42deg, #E75B65 -88.04%, #D12C37 130.2%);
+        box-shadow: 0px 2px 7px rgba(120, 137, 149, 0.254784);
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+        transition: all 0.5s;
+
+        &:hover {
+            scale: 1.05;
+        }
+    }
+
+}

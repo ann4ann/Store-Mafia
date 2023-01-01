@@ -1,0 +1,40 @@
+@mixin tableRow {
+  padding: 16px 0 18px 30px;
+  max-height: 90px;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 1fr 3fr 2fr 1fr 1fr 1fr;
+  align-items: center;
+  position: relative;
+
+  &>td:last-child {
+    text-align: right;
+  }
+}
+
+.table__row {
+  @include tableRow;
+
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 19px;
+  letter-spacing: -0.1px;
+  text-align: left;
+  border-bottom: 1px solid #b7bcc0;
+}
+
+.table__btn_Inner{
+  display: flex;
+  justify-content: end;
+}
+
+.table__btn {
+  color: red;
+  cursor: pointer;
+  transition: all 0.5s;
+  width: 10px;
+  margin-right: 10px;
+  &:hover{
+    scale: 1.2;
+  }
+}

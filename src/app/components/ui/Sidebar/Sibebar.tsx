@@ -14,7 +14,7 @@ interface IProps {
 const Sidebar: FC<IProps> = ({ link = '' }) => {
 
     const items: item[] = [
-        { title: 'Наборы', link: 'sets' },
+        { title: 'Наборы', link: 'kit' },
         { title: 'Маски', link: 'masks' },
         { title: 'Номерки', link: 'numbers' },
         { title: 'Карты', link: 'cards' },

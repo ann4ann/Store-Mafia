@@ -5,8 +5,18 @@ import Wrapper from '../../ui/Wrapper/Wrapper';
 import CardProductPage from '../CardProductPage/CardProductPage';
 import { item } from './CatalogNavigate';
 import styles from './CatalogPage.module.scss';
+import { useEffect } from 'react'
 
 const CatalogPage: React.FC<item> = (elem) => {
+
+    useEffect(() => {
+        window.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: 'smooth',
+        });
+    }, [])
+
     return (
         <Routes>
             <Route path="/" element={

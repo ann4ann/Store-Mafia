@@ -9,7 +9,7 @@ interface item {
 const CatalogFooter: React.FC = () => {
 
     const items: item[] = [
-        { title: 'Наборы', link: 'catalog/sets' },
+        { title: 'Наборы', link: 'catalog/kit' },
         { title: 'Маски', link: 'catalog/masks' },
         { title: 'Номерки', link: 'catalog/numbers' },
         { title: 'Карты', link: 'catalog/cards' },
