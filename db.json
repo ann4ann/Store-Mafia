@@ -168,8 +168,13 @@
         },
         {
           "price": 55,
-          "quantity": 2,
+          "quantity": 4,
           "productId": 2
+        },
+        {
+          "price": 55,
+          "quantity": 5,
+          "productId": 1
         }
       ]
     },

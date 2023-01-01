@@ -1,8 +1,8 @@
 import PathNavigate from '../../ui/PathNavigate/PathNavigate';
-import TableContent from '../../ui/TableContent/TableContent';
 import Wrapper from '../../ui/Wrapper/Wrapper';
 import styles from './BasketPage.module.scss';
 import { useEffect } from 'react'
+import TableContent from '../../ui/TableContent/TableContent';
 
 const BasketPage = () => {
 
