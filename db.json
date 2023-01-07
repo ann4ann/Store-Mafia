@@ -158,22 +158,17 @@
       "items": [
         {
           "price": 55,
-          "quantity": 8,
+          "quantity": 5,
           "productId": 4
         },
         {
           "price": 55,
-          "quantity": 3,
+          "quantity": 1,
           "productId": 6
         },
         {
           "price": 55,
-          "quantity": 4,
-          "productId": 2
-        },
-        {
-          "price": 55,
-          "quantity": 5,
+          "quantity": 8,
           "productId": 1
         }
       ]
@@ -238,6 +233,14 @@
       "rate": 2,
       "text": "Товар не норм(",
       "id": 6
+    },
+    {
+      "name": "Ilya",
+      "productId": 3,
+      "email": "...",
+      "rate": 3,
+      "text": "...",
+      "id": 7
     }
   ]
 }
