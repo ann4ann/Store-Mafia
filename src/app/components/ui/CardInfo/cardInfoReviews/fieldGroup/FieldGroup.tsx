@@ -1,13 +1,14 @@
-import React, { FormEvent, useState } from 'react';
+import React, { useState } from 'react';
 import { useCreateReviewMutation } from '../../../../../../services/ReviewService';
 import Rating from '../../../Rating/Rating';
 import SacsesReview from '../../../SacsesReview/SacsesReview';
+import TextField from '../../../TextField/TextField';
 import styles from './FieldGroup.module.scss'
 
 interface IInputItem {
     title: string,
     value: string,
-    setValue: any,
+    setValue: (prevState: string) => void,
 }
 
 const FieldGroup: React.FC<{ productId: number }> = ({ productId }) => {
@@ -43,7 +44,7 @@ const FieldGroup: React.FC<{ productId: number }> = ({ productId }) => {
                 setVisible(true)
             }
         }
-        else{
+        else {
             setError(true)
         }
     }
@@ -53,13 +54,10 @@ const FieldGroup: React.FC<{ productId: number }> = ({ productId }) => {
             {visible && <SacsesReview title='Ваш отзыв отправлен' setVisible={setVisible} />}
             <form className={styles.form} onSubmit={e => e.preventDefault()}>
                 {inputList.map((elem: IInputItem) => (
-                    <div key={elem.title} className={styles.inputInner}>
-                        <p className={styles.title}>{elem.title}</p>
-                        <input value={elem.value}
-                            onChange={(e: FormEvent<HTMLInputElement>) => elem.setValue(e.currentTarget.value)}
-                            className={styles.input} type="text"
-                        />
-                    </div>
+                    <TextField
+                        key={elem.title}
+                        {...elem}
+                    />
                 ))}
                 <div className={styles.ratingInner}>
                     <Rating starLength={32} value={rating} setValue={setRating} statical />
