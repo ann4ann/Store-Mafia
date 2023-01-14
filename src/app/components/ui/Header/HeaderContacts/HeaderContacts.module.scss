@@ -6,21 +6,21 @@
    justify-content: center;
    align-items: center;
    cursor: pointer;
-   font-weight: bold;
-   font-size: 14px;
-
-   background: url('./arrowDown.png') no-repeat;
-   background-size: 5px;
-   background-position: right;
 
    padding-right: 2px;
-   // min-width: 7rem;
+   min-width: 15rem;
    max-width: 10rem;
-   margin-right: 2rem;
 
    button {
+      font-weight: bold;
+      font-size: 14px;
       background: none;
       border: none;
       cursor: pointer;
+
+      background: url('./arrowDown.png') no-repeat;
+      background-size: 5px;
+      background-position: right;
+      padding-right: 10px;
    }
 }
