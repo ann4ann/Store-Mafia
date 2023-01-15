@@ -9,7 +9,7 @@ import CardInfoToggle from "./cardInfoToggle/CardInfoToggle";
 
 
 interface IProps {
-  id: number,
+  id: string,
   name: string,
   desc: string,
 }

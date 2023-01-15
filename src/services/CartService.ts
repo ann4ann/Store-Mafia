@@ -1,10 +1,10 @@
-import { ICart, UpdateQuantity } from "../models/ICart";
+import { ICart, UpdateQuantity, productItem } from "../models/ICart";
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/dist/query/react";
 
 export const cartAPI = createApi({
   reducerPath: "cartAPI",
   baseQuery: fetchBaseQuery({
-    baseUrl: "http://localhost:5000/cart",
+    baseUrl: "http://localhost:5001/cart",
   }),
   tagTypes: ['Cart'],
   endpoints: (build) => ({
@@ -19,6 +19,15 @@ export const cartAPI = createApi({
     updateQuantity: build.mutation<ICart, UpdateQuantity>({
       query: (props) => ({
         url: `/update`,
+        method: 'PUT',
+        body: { ...props }
+      }),
+      invalidatesTags: ["Cart"]
+    }),
+
+    createCartItem: build.mutation<ICart, {userId: string, productId: string, price: number}>({
+      query: (props) => ({
+        url: `/create/item`,
         method: 'PUT',
         body: { ...props }
       }),
@@ -40,6 +49,7 @@ export const cartAPI = createApi({
 export const {
   useFetchCartByIdQuery,
   useUpdateQuantityMutation,
+  useCreateCartItemMutation,
   useDeleteCartItemMutation
 } = cartAPI
 

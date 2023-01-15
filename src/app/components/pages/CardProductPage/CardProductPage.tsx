@@ -12,7 +12,7 @@ import { useEffect } from 'react'
 
 const CardProductPage: React.FC = () => {
 
-    const { data, isError, isLoading } = useFetchProductByIdQuery(Number(useLocation().pathname.split('/').reverse()[0]))
+    const { data, isError, isLoading } = useFetchProductByIdQuery(useLocation().pathname.split('/').reverse()[0])
 
     useEffect(() => {
         window.scrollTo({
@@ -34,7 +34,7 @@ const CardProductPage: React.FC = () => {
                             <CardDetailGalery type={data.type} img={data.img} />
                             <CardDetailDesc {...data} />
                         </div>
-                        <CardInfo {...data} />
+                        {/* <CardInfo {...data} /> */}
                         <div className={styles.cardsGalleryInner}>
                             <CardsGallery title='Похожие товары' category={data.category.category} itemsCount={4} />
                         </div>

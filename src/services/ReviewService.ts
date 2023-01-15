@@ -9,7 +9,7 @@ export const reviewAPI = createApi({
   }),
   tagTypes: ['Review'],
   endpoints: (build) => ({
-    fetchReviews: build.query<IReview[], number>({
+    fetchReviews: build.query<IReview[], string>({
       query: (productId) => ({
         url: "./reviews",
         params: {
@@ -18,7 +18,7 @@ export const reviewAPI = createApi({
       }),
       providesTags: result => ['Review']
     }),
-    fetchReviewsLimit: build.query<IReview[], number[]>({
+    fetchReviewsLimit: build.query<IReview[], [number, string]>({
       query: ([limit = 2, productId]) => ({
         url: "./reviews",
         params: {

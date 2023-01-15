@@ -9,7 +9,7 @@ interface IProps {
   limit: number
   setLimit: (limit: number) => void,
   reviewsLength: number | undefined,
-  productId: number,
+  productId: string,
 }
 
 const CardInfoReviews: React.FC<IProps> = ({ reviews, limit, setLimit, reviewsLength = 0, productId }) => {

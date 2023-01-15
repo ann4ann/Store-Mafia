@@ -1,6 +1,6 @@
 export interface IReview {
-    id?: number
-    productId: number,
+    id?: string
+    productId: string,
     name: string,
     text: string,
     rate: number,

@@ -11,7 +11,7 @@ interface IInputItem {
     setValue: (prevState: string) => void,
 }
 
-const FieldGroup: React.FC<{ productId: number }> = ({ productId }) => {
+const FieldGroup: React.FC<{ productId: string }> = ({ productId }) => {
     const [createReview, { isLoading, isError }] = useCreateReviewMutation()
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')

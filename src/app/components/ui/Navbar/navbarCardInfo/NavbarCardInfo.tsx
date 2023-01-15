@@ -5,12 +5,12 @@ import styles from './NavbarCardInfo.module.scss'
 
 const NavbarCardInfo: React.FC = () => {
 
-    const { data } = useFetchCartByIdQuery(1)
+    const { data } = useFetchCartByIdQuery("fs4tw3t445t2rq321")
     const [price, setPrice] = useState(0)
 
     useEffect(() => {
         if (data) {
-            const allPrice = data[0].items.reduce((prev, item) => {
+            const allPrice = data.items.reduce((prev, item) => {
                 return prev + (item.price * item.quantity)
             }, 0)
             setPrice(() => allPrice)
@@ -21,9 +21,9 @@ const NavbarCardInfo: React.FC = () => {
         <div className={styles.cardInfo}>
             <Link to={'/basket'}>
                 <div className={styles.svgInner}>
-                    {(data? data[0].items.length: 0) !== 0 &&
+                    {(data? data.items.length: 0) !== 0 &&
                         <div className={styles.busketValue}>
-                            {(data? data[0].items.length: 0) || 0}
+                            {(data? data.items.length: 0) || 0}
                         </div>
                     }
                     <svg className={styles.basketIcon} width="23" height="21" viewBox="0 0 23 21" fill="none" xmlns="http://www.w3.org/2000/svg">

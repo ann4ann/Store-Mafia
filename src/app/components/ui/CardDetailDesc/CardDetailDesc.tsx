@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { IProduct } from '../../../../models/IProduct'
-import { useFetchCartByIdQuery, useUpdateCartByIdMutation } from '../../../../services/CartService'
+import { useFetchCartByIdQuery, useCreateCartItemMutation, useUpdateQuantityMutation } from '../../../../services/CartService'
 import Rating from '../Rating/Rating'
 import style from './CardDetailDesc.module.scss'
 
@@ -8,8 +8,9 @@ import style from './CardDetailDesc.module.scss'
 
 export const CardDetailDesc: React.FC<IProduct> = (data) => {
 
-    const { data: cart, isLoading } = useFetchCartByIdQuery(1)
-    const [updateCartById] = useUpdateCartByIdMutation()
+    const { data: cart, isLoading } = useFetchCartByIdQuery('fs4tw3t445t2rq321')
+    const [createCartItem] = useCreateCartItemMutation()
+    const [updateQuantity] = useUpdateQuantityMutation()
 
     const [price, setPrice] = useState(data.price)
     const [count, setCount] = useState(1)
@@ -24,25 +25,15 @@ export const CardDetailDesc: React.FC<IProduct> = (data) => {
         setCount(prev => prev - 1)
     }
 
-    const payProductHandler = async() => {
+    const payProductHandler = async () => {
         if (cart && !isLoading) {
-            const item = cart[0].items.find(elem => elem.productId === data.id)
+            const item = cart.items.find(elem => elem.productId === data.id)
 
             if (item) {
-                const items = cart[0].items.map(elem => {
-                    if (elem.productId === data.id) {
-                        return { ...elem, quantity: elem.quantity + count }
-                    }
-                    return elem
-                })
-                await updateCartById([1, [cart[0], items]])
+                await updateQuantity({productId: data.id, quantity: count, userId: cart.userId})
             }
             else {
-                await updateCartById([1, [cart[0], [...cart[0].items, {
-                    price: data.price,
-                    quantity: count,
-                    productId: data.id
-                }]]])
+                await createCartItem({userId: cart.userId, productId: data.id, price: data.price})
             }
             await setCount(1)
         }
