@@ -1,13 +1,17 @@
 export interface productItem {
-  productId: number;
+  productId: string;
   quantity: number;
   price: number
 }
 
 export interface ICart {
-  id: number;
-  userId: number;
+  id: string;
+  userId: string;
   items: productItem[];
 }
 
-
+export interface UpdateQuantity{
+  userId: string,
+  productId: string,
+  quantity: number
+}

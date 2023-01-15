@@ -18,7 +18,12 @@ const TableBasket: React.FC<ICart> = (data) => {
           </tr>
           {data.items &&
             data.items.map((item, index) => (
-              <TableItem key={index} {...item} id={data.id} items={data.items || []} cart={data}/>
+              <TableItem
+                key={index}
+                userId={data.userId}
+                productId={item.productId}
+                quantity={item.quantity}
+              />
             ))}
         </tbody>
       </table>

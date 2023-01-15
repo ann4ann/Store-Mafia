@@ -1,35 +1,45 @@
-import { ICart, productItem } from "../models/ICart";
+import { ICart, UpdateQuantity } from "../models/ICart";
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/dist/query/react";
 
 export const cartAPI = createApi({
   reducerPath: "cartAPI",
   baseQuery: fetchBaseQuery({
-    baseUrl: "http://localhost:5000",
+    baseUrl: "http://localhost:5000/cart",
   }),
   tagTypes: ['Cart'],
   endpoints: (build) => ({
-    fetchCartById: build.query<ICart[], number>({
-      query: (userId: number) => ({
-        url: `/cart`,
-        params: {
-          userId
-        },
+
+    fetchCartById: build.query<ICart, string>({
+      query: (userId) => ({
+        url: `/${userId}`
       }),
       providesTags: () => ['Cart']
     }),
-    updateCartById: build.mutation<ICart[], [number, [ICart, productItem[]]]>({
-      query: ([id, [cart, items]]) => ({
-        url: `/cart/${id}`,
+
+    updateQuantity: build.mutation<ICart, UpdateQuantity>({
+      query: (props) => ({
+        url: `/update`,
         method: 'PUT',
-        body: { ...cart, items }
+        body: { ...props }
       }),
       invalidatesTags: ["Cart"]
-    })
+    }),
+
+    deleteCartItem: build.mutation<ICart[], { userId: string, productId: string }>({
+      query: (props) => ({
+        url: `/delete`,
+        method: 'DELETE',
+        body: { ...props }
+      }),
+      invalidatesTags: ["Cart"]
+    }),
+    
   }),
 });
 
 export const {
   useFetchCartByIdQuery,
-  useUpdateCartByIdMutation
+  useUpdateQuantityMutation,
+  useDeleteCartItemMutation
 } = cartAPI
 

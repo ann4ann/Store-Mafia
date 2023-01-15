@@ -8,12 +8,12 @@ const discount = 100
 
 const TableContent = () => {
 
-    const { data, isLoading, isError } = useFetchCartByIdQuery(1)
+    const { data, isLoading, isError } = useFetchCartByIdQuery('fs4tw3t445t2rq321')
     const [price, setPrice] = useState(0)
 
     useEffect(() => {
         if (data) {
-            const allPrice = data[0].items.reduce((prev, item) => {
+            const allPrice = data.items.reduce((prev, item) => {
                 return prev + (item.price * item.quantity)
             }, 0)
             setPrice(() => allPrice)
@@ -24,7 +24,7 @@ const TableContent = () => {
 
         {data && !isLoading ?
             <div className={styles.tableWrapper}>
-                <TableBasket {...data[0]} />
+                <TableBasket {...data} />
                 <div className={styles.priceInfo}>
                     <div className={styles.priceInner}>
                         <p className={styles.text}>Скидка</p>
