@@ -5,13 +5,13 @@ import { IUser } from "../models/IUser";
 export const userAPI = createApi({
     reducerPath: "userAPI",
     baseQuery: fetchBaseQuery({
-        baseUrl: "http://localhost:5000/",
+        baseUrl: "http://localhost:5001/",
     }),
     endpoints: (build) => ({
         fetchUsers: build.query<IUser[], string>({
             query: () => `users`
         }),
-        fetchUser: build.query<IUser, number>({
+        fetchUser: build.query<IUser, string>({
             query: (id) => ({
                 url: `users/${id}`,
                 method: 'GET',

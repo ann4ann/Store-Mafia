@@ -4,11 +4,11 @@ import { IProduct } from "../models/IProduct";
 export const productAPI = createApi({
   reducerPath: "productAPI",
   baseQuery: fetchBaseQuery({
-    baseUrl: "http://localhost:5001/product",
+    baseUrl: "http://localhost:5001/api/product",
   }),
   endpoints: (build) => ({
     fetchAllProducts: build.query<IProduct[], number>({
-      query: (limit: number = 4) => ({
+      query: (limit = 4) => ({
         url: "/",
         // params: {
         //   _limit: limit,
@@ -21,7 +21,7 @@ export const productAPI = createApi({
         // params: {
         //   _limit: limit,
         // },
-      }),
+      }), 
     }),
 
     // Для CardDetail, пока не тестировалось:

@@ -19,16 +19,16 @@ const CardsGallery: FC<cardsGalleryProps> = ({ itemsCount, category, title }) =>
 
   return (
     <section className={styles.cardsGallery}>
-      {title ?
+      {title || products ?
         <div className={styles.subtitleInner}>
-          <Subtitle mix="center"> {title || products?.at(0)?.category.name}</Subtitle>
+          <Subtitle mix="center"> {title || products && products[0]?.category.name}</Subtitle>
         </div>
         :
-        <Subtitle mix="center"> {title || products?.at(0)?.category.name}</Subtitle>
+        <Subtitle mix="center"> {title || 'title'}</Subtitle>
       }
 
       <div className={styles.cardsGallery__items}>
-        {products?.map((product, index) => (
+        {(products && products.length > 0) && products.map((product, index) => (
           <Card key={index} {...product} />
         ))}
       </div>

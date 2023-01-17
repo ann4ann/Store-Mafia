@@ -4,12 +4,13 @@ import TableBasket from '../TableBasket/TableBasket';
 import styles from './TableContent.module.scss';
 import { useEffect, useState } from 'react'
 
-const discount = 100
 
 const TableContent = () => {
 
     const { data, isLoading, isError } = useFetchCartByIdQuery('fs4tw3t445t2rq321')
     const [price, setPrice] = useState(0)
+
+    let discount = price > 1000? 100 : 0
 
     useEffect(() => {
         if (data) {

@@ -31,10 +31,10 @@ const CardProductPage: React.FC = () => {
                     <Wrapper>
                         <h2 className={styles.title}>{data.name}</h2>
                         <div className={styles.cardDetails}>
-                            <CardDetailGalery type={data.type} img={data.img} />
+                            <CardDetailGalery img={data.img} />
                             <CardDetailDesc {...data} />
                         </div>
-                        {/* <CardInfo {...data} /> */}
+                        <CardInfo {...data} />
                         <div className={styles.cardsGalleryInner}>
                             <CardsGallery title='Похожие товары' category={data.category.category} itemsCount={4} />
                         </div>

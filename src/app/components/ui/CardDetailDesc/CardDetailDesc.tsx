@@ -27,13 +27,17 @@ export const CardDetailDesc: React.FC<IProduct> = (data) => {
 
     const payProductHandler = async () => {
         if (cart && !isLoading) {
-            const item = cart.items.find(elem => elem.productId === data.id)
+            const item = cart.items.find(elem => elem.productId === data._id)
 
             if (item) {
-                await updateQuantity({productId: data.id, quantity: count, userId: cart.userId})
+                await updateQuantity({
+                    productId: data._id,
+                    quantity: item.quantity + count < 9 ? item.quantity + count : 9,
+                    userId: cart.userId
+                })
             }
             else {
-                await createCartItem({userId: cart.userId, productId: data.id, price: data.price})
+                await createCartItem({ userId: cart.userId, productId: data._id, price: data.price })
             }
             await setCount(1)
         }
@@ -56,7 +60,7 @@ export const CardDetailDesc: React.FC<IProduct> = (data) => {
                     <button className={style.btn} onClick={onClickHandlerInc}>+</button>
                 </div>
                 <button className={style.btnPay} onClick={() => payProductHandler()}>Купить</button>
-                <p className={style.text} >{data.type}</p>
+                {/* <p className={style.text} >{data.type}</p> */}
             </div>
             <div className={style.secondDiv}>
                 <div className={style.ratingInner}>

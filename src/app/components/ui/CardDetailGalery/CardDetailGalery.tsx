@@ -3,11 +3,10 @@ import style from './CardDetailGalery.module.scss'
 import goldenMafia from './goldenMafia.png'
 
 interface IProps {
-    type: string,
     img: string[]
 }
 
-export const CardDetailGalery: FC<IProps> = ({ type, img }) => {
+export const CardDetailGalery: FC<IProps> = ({ img }) => {
 
     const [activeImg, setActiveImg] = useState(img[1])
     const [translate, setTranslate] = useState(0)
@@ -28,7 +27,7 @@ export const CardDetailGalery: FC<IProps> = ({ type, img }) => {
         <div>
             <div className={style.mainImg}>
                 <div className={style.text}>
-                    <span>{type}</span>
+                    {/* <span>{type}</span> */}
                 </div>
                 <img src={activeImg} alt='cardImg' className={style.firstImg} />
             </div>

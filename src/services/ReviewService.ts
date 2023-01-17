@@ -1,36 +1,23 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 import { IReview } from "../models/IReview";
 
-
 export const reviewAPI = createApi({
   reducerPath: "reviewAPI",
   baseQuery: fetchBaseQuery({
-    baseUrl: "http://localhost:5000/",
+    baseUrl: "http://localhost:5001/api/review",
   }),
   tagTypes: ['Review'],
   endpoints: (build) => ({
-    fetchReviews: build.query<IReview[], string>({
-      query: (productId) => ({
-        url: "./reviews",
-        params: {
-          productId,
-        },
+    fetchReviews: build.query<IReview[], { limit?: number, productId: string }>({
+      query: ({ limit, productId }) => ({
+        url: "/",
+        params: { limit: limit, productId },
       }),
-      providesTags: result => ['Review']
-    }),
-    fetchReviewsLimit: build.query<IReview[], [number, string]>({
-      query: ([limit = 2, productId]) => ({
-        url: "./reviews",
-        params: {
-          _limit: limit,
-          productId,
-        },
-      }),
-      providesTags: result => ['Review']
+      providesTags: result => ['Review'] 
     }),
     createReview: build.mutation<IReview, IReview>({
       query: (review) => ({
-        url: `./reviews`,
+        url: `/`,
         method: 'POST',
         body: { ...review }
       }),
@@ -39,4 +26,4 @@ export const reviewAPI = createApi({
   }),
 });
 
-export const { useFetchReviewsQuery, useLazyFetchReviewsLimitQuery, useCreateReviewMutation } = reviewAPI
+export const { useFetchReviewsQuery, useLazyFetchReviewsQuery, useCreateReviewMutation } = reviewAPI

@@ -42,7 +42,7 @@ const CardItem: React.FC<IProduct> = (data) => {
   return (
     <div className="card">
       <div className="card-item">
-        <span>{data.type}</span>
+        {/* <span>{data.type}</span> */}
         <img
           src="http://course.fudzi.kz/numerok.jpg"
           alt={data.name}
@@ -52,7 +52,7 @@ const CardItem: React.FC<IProduct> = (data) => {
       <span>{data.name}</span>
       <div className="card-footer">
         <span className="price">Цена: {data.price}</span>
-        <Link to={`/catalog/${categoryName.link}/${data.id}`} className="btn">
+        <Link to={`/catalog/${categoryName.link}/${data._id}`} className="btn">
           Купить
         </Link>
       </div>

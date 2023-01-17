@@ -5,7 +5,7 @@ export interface productItem {
 }
 
 export interface ICart {
-  id: string;
+  _id: string;
   userId: string;
   items: productItem[];
 }

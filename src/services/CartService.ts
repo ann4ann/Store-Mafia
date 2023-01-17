@@ -4,7 +4,7 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/dist/query/react";
 export const cartAPI = createApi({
   reducerPath: "cartAPI",
   baseQuery: fetchBaseQuery({
-    baseUrl: "http://localhost:5001/cart",
+    baseUrl: "http://localhost:5001/api/cart",
   }),
   tagTypes: ['Cart'],
   endpoints: (build) => ({
@@ -28,7 +28,7 @@ export const cartAPI = createApi({
     createCartItem: build.mutation<ICart, {userId: string, productId: string, price: number}>({
       query: (props) => ({
         url: `/create/item`,
-        method: 'PUT',
+        method: 'POST',
         body: { ...props }
       }),
       invalidatesTags: ["Cart"]

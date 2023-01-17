@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
+import { IProduct } from "../../../../models/IProduct";
 import { } from "../../../../models/IReview";
-import { useFetchReviewsQuery, useLazyFetchReviewsLimitQuery } from "../../../../services/ReviewService";
+import { useFetchReviewsQuery, useLazyFetchReviewsQuery } from "../../../../services/ReviewService";
 import Wrapper from "../Wrapper/Wrapper";
 import styles from "./CardInfo.module.scss";
 import CardInfoDescription from "./cardInfoDescription/CardInfoDescription";
@@ -8,15 +9,9 @@ import CardInfoReviews from "./cardInfoReviews/CardInfoReviews";
 import CardInfoToggle from "./cardInfoToggle/CardInfoToggle";
 
 
-interface IProps {
-  id: string,
-  name: string,
-  desc: string,
-}
-
-const CardInfo: React.FC<IProps> = (props) => {
-  const { data } = useFetchReviewsQuery(props.id)
-  const [fetchReviews, { data: reviews, isLoading }] = useLazyFetchReviewsLimitQuery()
+const CardInfo: React.FC<IProduct> = (props) => {
+  const { data } = useFetchReviewsQuery({ productId: props._id })
+  const [fetchReviews, { data: reviews, isLoading }] = useLazyFetchReviewsQuery()
 
   const [limit, setLimit] = useState(2)
   const [indexActive, setIndexActive] = useState(0);
@@ -26,7 +21,7 @@ const CardInfo: React.FC<IProps> = (props) => {
   };
 
   useEffect(() => {
-    (async () => await fetchReviews([limit, props.id]))()
+    (async () => await fetchReviews({limit, productId: props._id }))()
   }, [limit, props, fetchReviews])
 
   return (
@@ -48,7 +43,7 @@ const CardInfo: React.FC<IProps> = (props) => {
               limit={limit}
               setLimit={setLimit}
               reviewsLength={data?.length}
-              productId={props.id}
+              productId={props._id}
             />
           }
         </div>

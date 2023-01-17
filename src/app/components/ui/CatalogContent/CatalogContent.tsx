@@ -13,7 +13,7 @@ const CatalogContent: React.FC<IProps> = ({ link, discription, title }) => {
 
     const { data, isLoading } = useFetchProductByCategoryQuery([4, link])
 
-    return (
+    return (    
         <div className={styles.inner}>
             <Sidebar link={link} />
             <div className={styles.container}>
@@ -24,16 +24,14 @@ const CatalogContent: React.FC<IProps> = ({ link, discription, title }) => {
                     : (data && data.length > 0
                         ?
                         <ul className={styles.list}>
-                            {data?.map((elem, index) => <li key={index} className={styles.listItem}>
-                                <CardItem {...elem}/>
-                                </li>)}
+                            {data && data.map((elem, index) => <li key={index} className={styles.listItem}>
+                                <CardItem {...elem} />
+                            </li>)}
                         </ul>
                         :
                         <div>нет элементов</div>
                     )
                 }
-
-
             </div>
         </div>
     );
