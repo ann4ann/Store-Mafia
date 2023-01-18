@@ -41,12 +41,12 @@ const HeaderSearchBar: React.FC = () => {
       if (card.title.toLowerCase().includes(userInput.toLowerCase()))
          return card;
    });
-   const filteredCards =
-      userInput.length > 2
-         ? cardDescription.map((card: ICardsDescription, index: number) => (
-              <HeaderSearchBarCard key={index} {...card} />
-           ))
-         : '';
+   // const filteredCards =
+   //    userInput.length > 2
+   //       ? cardDescription.map((card: ICardsDescription, index: number) => (
+   //            <HeaderSearchBarCard key={index} {...card} />
+   //         ))
+   //       : '';
 
    return (
       <div className={styles.input}>
@@ -63,7 +63,15 @@ const HeaderSearchBar: React.FC = () => {
                   open ? styles.visible : ''
                }`}
             >
-               <ul>{filteredCards}</ul>
+               {userInput.length > 2 && (
+                  <ul>
+                     {cardDescription.map(
+                        (card: ICardsDescription, index: number) => (
+                           <HeaderSearchBarCard key={index} {...card} />
+                        )
+                     )}
+                  </ul>
+               )}
             </div>
          </div>
          <div
