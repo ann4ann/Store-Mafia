@@ -1,0 +1,22 @@
+.headerModal {
+  .choise {
+    font-size: 14px;
+    color: #4b4b4b;
+  }
+  .underline {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}
+
+.textField {
+  label {
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  input {
+    display: block;
+    margin-bottom: 10px;
+  }
+}

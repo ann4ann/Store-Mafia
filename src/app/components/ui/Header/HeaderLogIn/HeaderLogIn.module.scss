@@ -1,21 +1,20 @@
 .registration {
-   display: flex;
-   width: 15rem;
-   height: 100%;
-   justify-content: center;
-   align-items: center;
-   cursor: pointer;
+  display: flex;
+  width: 15rem;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
 
-   button {
-      font-size: 14px;
-      font-weight: bold;
-      border: none;
-      background: none;
-      cursor: pointer;
+  button {
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    background: none;
+    cursor: pointer;
 
-      background: url('./arrowDown.png') no-repeat;
-      background-size: 5px;
-      background-position: right;
-      padding-right: 10px;
-   }
+    background: url("./arrowDown.png") no-repeat;
+    background-size: 5px;
+    background-position: right;
+    padding-right: 10px;
+  }
 }
