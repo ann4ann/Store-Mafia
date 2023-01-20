@@ -1,5 +1,5 @@
 .navbar {
-  background: linear-gradient(212.42deg, #E75B65 -88.04%, #D12C37 130.2%);
+  background: linear-gradient(212.42deg, #e75b65 -88.04%, #d12c37 130.2%);
 }
 
 .navbarWrapper {
@@ -7,14 +7,16 @@
   justify-content: space-between;
   align-items: center;
   height: 70px;
+  padding: 0 30px;
 }
 
-a{
+a {
   text-decoration: none;
   color: inherit;
 }
 
-ul,li{
+ul,
+li {
   list-style: none;
   margin: 0;
   padding: 0;
